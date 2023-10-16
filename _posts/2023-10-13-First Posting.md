@@ -1,5 +1,5 @@
 ---
-layout: single wide
+layout: default
 title:  "Hello Github Blog"
 ---
 
