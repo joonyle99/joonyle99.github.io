@@ -12,13 +12,15 @@ title:  "DirectX 3D 11 Tutorial 01 - Init Device"
 3. Swap Chain
 4. Render Target View
 
+---
+
 ### Device & Device Context
 ---
 
 Device : 리소스 생성 및 관리를 담당. 버퍼, 텍스처, 셰이더 등을 생성할 때 이 객체를 사용  
 Device Context : 실제 렌더링 명령을 하드웨어에 전달하는 역할
 
-DirectX3D 10에서는 Device가 렌더링과 리소스 생성 둘 다 수행했는데, DirectX3D 11에서는 역할을 나눠 Device Context를 통해 백버퍼에 렌더링을 수행하고, Device는리소스를 생성하는 함수를 실행한다.
+> DirectX3D 10에서는 Device가 렌더링과 리소스 생성 둘 다 수행했는데, DirectX3D 11에서는 역할을 나눠 Device Context를 통해 백버퍼에 렌더링을 수행하고, Device는리소스를 생성하는 함수를 실행한다.
 
 ### Swap Chain
 ---
@@ -27,7 +29,7 @@ DirectX3D 10에서는 Device가 렌더링과 리소스 생성 둘 다 수행했�
 
 Swap Chain : Device가 렌더링된 백버퍼를 가져와 실제 모니터 화면에 콘텐츠를 표시하는 역할을 담당
 
-스왑 체인에는 주로 앞면과 뒷면에 두 개 이상의 버퍼가 포함되며, 모니터에 표시하기 위해 렌더링하는 텍스처임. Front Buffer는 실제 모니터에 표시되는 화면이고 ReadOnly다. Back Buffer는 장치가 그릴 렌더링 대상이다. 그리기 작업이 완료되면 스왑 체인은 두 버퍼를 스왑하여  Back Buffer를 Front Buffer에 표시한다.
+스왑 체인에는 주로 앞면과 뒷면에 두 개 이상의 버퍼가 포함되며, 모니터에 표시하기 위해 렌더링하는 텍스처이다. Front Buffer는 실제 모니터에 표시되는 화면이고 Back Buffer는 장치가 그릴 렌더링 대상이다. 그리기 작업이 완료되면 스왑 체인은 두 버퍼를 스왑하여 Back Buffer를 Front Buffer에 표시한다.
 
 ```c++
 
