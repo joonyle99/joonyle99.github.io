@@ -28,7 +28,7 @@ DirectX3D 11의 필수 객체와 초기화 하는 방법에 대해 알아본다.
 
 * Swap Chain : Device가 렌더링된 백버퍼를 가져와 실제 모니터 화면에 콘텐츠를 표시하는 역할을 담당
 
-스왑 체인에는 주로 앞면과 뒷면에 두 개 이상의 버퍼가 포함되며, 모니터에 표시하기 위해 렌더링하는 텍스처이다. Front Buffer는 실제 모니터에 표시되는 화면이고 Back Buffer는 장치가 그릴 렌더링 대상이다. 그리기 작업이 완료되면 스왑 체인은 두 버퍼를 스왑하여 Back Buffer를 Front Buffer에 표시한다.
+스왑 체인에는 주로 앞면과 뒷면에 두 개 이상의 버퍼가 포함되며, 모니터에 표시하기 위해 렌더링하는 텍스처이며, Front Buffer는 실제 모니터에 표시되는 화면이고 Back Buffer는 장치가 그릴 렌더링 대상이다. 그리기 작업이 완료되면 스왑 체인은 두 버퍼를 스왑하여 Back Buffer를 Front Buffer에 표시한다.
 
 ```c++
 
@@ -64,7 +64,7 @@ hr = D3D11CreateDeviceAndSwapChain(nullptr, g_driverType, nullptr, createDeviceF
 ### Render Target View
 ---
 
-다음으로 해야 할 일은 Render Target View를 만드는 것이다.Render Target View는 Direct3D 11의 리소스 뷰 유형인데, 리소스 뷰를 사용하면 특정 단계에서 리소스를 렌더링 파이프라인에 바인딩할 수 있다.
+다음으로 해야 할 일은 Render Target View를 만드는 것이다. 렌더 타겟 뷰는 Direct3D 11의 리소스 뷰 유형인데, 리소스 뷰를 사용하면 특정 단계에서 리소스를 렌더링 파이프라인에 바인딩할 수 있다.
 
 ```c++
 
@@ -86,7 +86,7 @@ hr = D3D11CreateDeviceAndSwapChain(nullptr, g_driverType, nullptr, createDeviceF
 
 ```
 
-Swap Chain의 Back Buffer를 Render Target으로 바인딩하고 싶기 때문에 Render Target View를 만들어야 한다. 먼저 GetBuffer()를 호출하여 Back Buffer를 가져온 후, 선택적으로 생성할 Render Target View를 설명하는 D3D11_RENDERTARGETVIEW_DESC 구조를 채울 수 있다. 이 구조체에 대한 내용은CreateRenderTargetView의 두 번째 파라미터이인데, 튜토리얼에서는 기본 렌더 타깃 뷰로 충분하다.
+Swap Chain의 Back Buffer를 Render Target으로 바인딩하고 싶기 때문에 렌더 타겟 뷰를 만들어야 한다. 먼저 GetBuffer()를 호출하여 Back Buffer를 가져온 후, 선택적으로 생성할 Render Target View를 설명하는 D3D11_RENDERTARGETVIEW_DESC 구조를 채울 수 있다. 이 구조체에 대한 내용은CreateRenderTargetView의 두 번째 파라미터이인데, 튜토리얼에서는 기본 렌더 타겟 뷰로 충분하다.
 
 ```c++
 
@@ -95,7 +95,7 @@ Swap Chain의 Back Buffer를 Render Target으로 바인딩하고 싶기 때문�
 
 ```
 
-Render Target View를 생성한 후에는 Device Context에서 OMSetRenderTargets()를 호출하여 파이프라인에 바인딩할 수 있다. 이렇게 하면 파이프라인이 렌더링하는 Output이 백 버퍼에 Merge된다.
+Render Target View를 생성한 후에는 Device Context에서 OMSetRenderTargets()를 호출하여 파이프라인에 바인딩할 수 있다. 이렇게 하면 파이프라인이 렌더링하는 Output이 Back Buffer에 Merge된다.
 
 ```c++
     /// 5. Setup the viewport
@@ -131,4 +131,4 @@ Render Target View를 생성한 후에는 Device Context에서 OMSetRenderTarget
 
 ```
 
-Direct3D 11에서 제공하는 인스턴스 컨텍스트 함수 ClearRenderTargetView() 메서드를 사용해 Render Target (Back Buffer)를 단일 색상으로 채운다. 그러기 위해 화면을 채울 색을 설명하는 4개의 실수 배열을 정의하고. 그런 다음 이 배열을 ClearRenderTargetView()에 전달한다. Back Buffer를 채우고 나면 Swap Chain의 Present() 메서드를 호출하여 렌더링을 완료한다. Present()는 Swap Chain의 Back Buffer 내용을 사용자가 볼 수 있도록 화면에 표시하는 역할을 한다.
+Direct3D 11에서 제공하는 인스턴스 컨텍스트 함수 ClearRenderTargetView() 메서드를 사용해 Render Target (Back Buffer)를 단일 색상으로 채운다. 그러기 위해 화면을 채울 색을 설명하는 4개의 실수 배열을 정의하고. 그런 다음 이 배열을 ClearRenderTargetView()에 전달한다. Back Buffer를 채우고 나면 Swap Chain의 Present() 메서드를 호출하여 렌더링을 완료한다. Present()는 Swap Chain의 Back Buffer 내용을 사용자가 볼 수 있도록 Front Buffer에 Back Buffer 내용을 표시하는 역할을 한다.
