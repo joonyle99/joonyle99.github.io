@@ -243,4 +243,6 @@ void Render()
 
 ID3D11DeviceContext::VSSetShader() 와 ID3D11DeviceContext::PSSetShader()를 호출해 셰이더를 사용한다. 마지막으로 ID3D11DeviceContext::Draw()를 호출하여 현재 Vertex Buffer, Vertex Layout 및 Primitive Topology를 사용하여 삼각형을 렌더링하도록 GPU에 명령한다. Draw()의 첫 번째 파라미터는 GPU에 전송할 버텍스 수이고, 두 번째 파라미터는 전송을 시작할 첫 번째 버텍스의 인덱스이다. 하나의 삼각형을 렌더링하고 Vertex Buffer의 시작부터 렌더링하기 때문에 두 매개변수에 각각 3과 0을 사용한다.
 
+<br>
+
 ![image](../assets/images/D3D/triangle2.png){: .align-center}
