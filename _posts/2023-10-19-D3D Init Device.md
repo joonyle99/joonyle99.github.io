@@ -133,4 +133,6 @@ Render Target View를 생성한 후에는 Device Context에서 OMSetRenderTarget
 
 Direct3D 11에서 제공하는 인스턴스 컨텍스트 함수 ClearRenderTargetView() 메서드를 사용해 Render Target (Back Buffer)를 단일 색상으로 채운다. 그러기 위해 화면을 채울 색을 설명하는 4개의 실수 배열을 정의하고. 그런 다음 이 배열을 ClearRenderTargetView()에 전달한다. Back Buffer를 채우고 나면 Swap Chain의 Present() 메서드를 호출하여 렌더링을 완료한다. Present()는 Swap Chain의 Back Buffer 내용을 사용자가 볼 수 있도록 Front Buffer에 Back Buffer 내용을 표시하는 역할을 한다.
 
+<br>
+
 ![image](../assets/images/D3D/init screen.png){: .align-center}
