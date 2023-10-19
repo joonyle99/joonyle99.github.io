@@ -50,10 +50,10 @@ Vertex vertices[] =
 위 코드처럼 정점 정보에는 Position, Normal Vector, Color, Texture Position 등과 같이 다양한 속성을 가지고 있다. Vertex Buffer에 정점의 의미있는 값을 넣기위해 Vertex Layout은 각 속성이 사용하는 데이터 유형, 각 속성의 크기, 메모리 내 속성의 순서 등 이러한 '속성이 메모리에 위치하는 방식'을 정의한다.
 
 ```c++
-struct SimpleVertex
-{
-	DirectX::XMFLOAT3 Pos;
-};
+	struct SimpleVertex
+	{
+		DirectX::XMFLOAT3 Pos;
+	};
 ```
 
 이 튜토리얼에서는 정점의 '위치'로만 작업한다. 따라서 Vertex를 XMFLOAT3 유형의 단일 필드로 Struct 구조체에 정의한다.
@@ -184,7 +184,7 @@ DirectX3D 11에서 Vertex Buffer를 생성하려면 두 개의 구조체, D3D11_
 하나의 삼각형을 렌더링하기 위해서는 3개의 정점을 GPU로 전송해야 한다. 따라서 Vertex Buffer에는 3개의 Vertex가 있다. 두 개의 삼각형을 렌더링하려면 어떻게 해야 할까? 한 가지 방법은 GPU에 6개의 정점을 보내는 것이다. 처음 세 개의 정점은 첫 번째 삼각형을 정의하고 두 번째 세 개의 정점은 두 번째 삼각형을 정의한다. 이 Topology를 Triangle List라고 한다. Triangle List는 이해하기 쉽다는 장점이 있지만, 매우 비효율적이다. 연속적으로 렌더링된 삼각형이 정점을 공유할 때 이러한 경우가 발생한다. 예를 들어 그림 3a는 두 개의 삼각형으로 구성된 정사각형을 보여준다 (일반적으로 삼각형은 정점을 시계 방향으로 나열하여 정의). Triangle List를 사용하여 이 두 삼각형을 GPU에 전송하면 vertex Buffer는 다음과 같은 상태가 된다.
 
 <center>A B C C B D</center>
-
+<br>
 
 B와 C 정점은 Vertex Buffer에 두 번 들어가게 된다. 왜냐하면 두 삼각형은 맞붙어있고, 두 정점을 공유하고 있기 때문이다.
 
@@ -193,14 +193,14 @@ B와 C 정점은 Vertex Buffer에 두 번 들어가게 된다. 왜냐하면 두 
 Triangle Strip을 렌더링할 때 첫 번째 삼각형은 Vertex Buffer의 처음 세 개의 버텍스로 정의되고, 다음 삼각형은 이전 삼각형의 마지막 두 버텍스와 버텍스 버퍼의 다음 버텍스로 정의된다. 그림 3a의 사각형을 예로 들어 Triangle Strip을 사용하면 Vertex Buffer는 다음과 같다.
 
 <center>A B C D</center>
-
+<br>
 
 이렇게 Triangle Strip Topology를 사용하면 Vertex Buffer 크기가 6개의 버텍스에서 4개의 버텍스로 줄어든다. 마찬가지로 그림 3b를 Triangle Strip을 사용해서 VB에 넣어보자.
 
 <center>Triangle List : A B C C B D D E C</center>
 
 <center>Triangle Strip : A B C D E</center>
-
+<br>
 
 Triangle Strip을 사용할 때 Vertex Buffer의 정점이 삼각형을 그릴때 순서가 시계 방향 순서를 형성하지 않는 경우가 있다. 이 경우 자연스러운 현상이며, 이를 극복하기 위해 GPU는 이전 삼각형에서 오는 두 정점의 순서를 자동으로 바꾼다. 이 작업은 두 번째 삼각형, 네 번째 삼각형, 여섯 번째 삼각형, 여덟 번째 삼각형 .. 등의 경우에만 수행된다. 이렇게 하면 모든 삼각형의 꼭짓점 감기 순서가 시계 방향이 된다.
 
@@ -216,23 +216,23 @@ Primitive Topology는 GPU가 삼각형을 렌더링하는 데 필요한 세 개�
 ### Render
 ---
 
-​```c++
+```c++
 void Render()
-{
-	// Clear the back buffer
-	constexpr FLOAT ClearColor[4] = { 0.5f, 0.1f, 0.25f, 0.5f };
-	g_pDeviceContext->ClearRenderTargetView(g_pRenderTargetView, ClearColor);
+	{
+		// Clear the back buffer
+		constexpr FLOAT ClearColor[4] = { 0.5f, 0.1f, 0.25f, 0.5f };
+		g_pDeviceContext->ClearRenderTargetView(g_pRenderTargetView, ClearColor);
 
-	// Render a triangle
-	g_pDeviceContext->VSSetShader(g_pVertexShader, nullptr, 0);
-	g_pDeviceContext->PSSetShader(g_pPixelShader, nullptr, 0);
-	g_pDeviceContext->Draw(3, 0);
+		// Render a triangle
+		g_pDeviceContext->VSSetShader(g_pVertexShader, nullptr, 0);
+		g_pDeviceContext->PSSetShader(g_pPixelShader, nullptr, 0);
+		g_pDeviceContext->Draw(3, 0);
 
-	// Present the information rendered to the back buffer to the front buffer (the screen)
-	g_pSwapChain->Present(0, 0);
-}
+		// Present the information rendered to the back buffer to the front buffer (the screen)
+		g_pSwapChain->Present(0, 0);
+	}
 ```
 
 삼각형의 실제 렌더링을 수행하는 코드이며, 렌더링을 위해 Vertex Shader와 Pixel Shader를 만들었다. Vertex Shader는 삼각형 각각의 정점을 올바른 위치로 변환하는 역할을 하고, Pixel Shader는 삼각형의 각 픽셀에 대한 최종 출력 색상을 계산한다 (사실 완전한 최종은 아니다 Output Merger Stage가 있기 때문).
 
-ID3D11DeviceContext::VSSetShader() 와 ID3D11DeviceContext::PSSetShader()를 호출 해 셰이더를 사용한다. 마지막으로 ID3D11DeviceContext::Draw()를 호출하여 현재 Vertex Buffer, Vertex Layout 및 Primitive Topology를 사용하여 삼각형을 렌더링하도록 GPU에 명령한다. Draw()의 첫 번째 파라미터는 GPU에 전송할 버텍스 수이고, 두 번째 파라미터는 전송을 시작할 첫 번째 버텍스의 인덱스이다. 하나의 삼각형을 렌더링하고 Vertex Buffer의 시작부터 렌더링하기 때문에 두 매개변수에 각각 3과 0을 사용한다.
+ID3D11DeviceContext::VSSetShader() 와 ID3D11DeviceContext::PSSetShader()를 호출해 셰이더를 사용한다. 마지막으로 ID3D11DeviceContext::Draw()를 호출하여 현재 Vertex Buffer, Vertex Layout 및 Primitive Topology를 사용하여 삼각형을 렌더링하도록 GPU에 명령한다. Draw()의 첫 번째 파라미터는 GPU에 전송할 버텍스 수이고, 두 번째 파라미터는 전송을 시작할 첫 번째 버텍스의 인덱스이다. 하나의 삼각형을 렌더링하고 Vertex Buffer의 시작부터 렌더링하기 때문에 두 매개변수에 각각 3과 0을 사용한다.
