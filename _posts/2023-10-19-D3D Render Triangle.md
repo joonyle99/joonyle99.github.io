@@ -3,6 +3,11 @@ layout: single
 title:  "DirectX 3D 11 Tutorial 02 - Render Triangle"
 ---
 
+### 목표
+---
+
+Vertex Buffer, Input Layout, Blob, Triangle List, Triangle Strip 등 삼각형을 렌더하기 위한 방법에 대해 알아본다.
+
 ### Vertex Buffer
 ---
 
@@ -118,11 +123,10 @@ Vertex Shader는 Vertex Layout과 긴밀하게 결합되어 있는데, 그 이�
 	// Binary Large Object
 	ID3DBlob* pErrorBlob = nullptr;
 
-	hr = D3DCompileFromFile(szFileName, nullptr, nullptr, szEntryPoint, szShaderModel,
-		dwShaderFlags, NULL, ppBlobOutput, &pErrorBlob);
+	hr = D3DCompileFromFile(szFileName, nullptr, nullptr, szEntryPoint, szShaderModel, dwShaderFlags, NULL, ppBlobOutput, &pErrorBlob);
 ```
 
-D3DCompileFromFile()에서 도출된 ID3DBlob 객체를 사용하여 Vertex Shader의 Input Signature를 나타내는 Blob을 확보한다. 
+D3DCompileFromFile()에서 도출된 ID3DBlob 객체를 사용하여 Shader 파일의 Input Signature를 나타내는 Blob을 확보한다. 
 
 > Blob(Binary Large Object)는 HSLS 파일을 이진 데이터로 저장한다.
 
@@ -141,6 +145,8 @@ D3DCompileFromFile()에서 도출된 ID3DBlob 객체를 사용하여 Vertex Shad
 ```
 
 이후 ID3D11Device::CreateInputLayout()을 호출하여 Vertex Layout 객체를 생성하고, ID3D11DeviceContext::IASetInputLayout()을 호출하여 Vertex Layout을 파이프라인에 설정할 수 있다.
+
+> Vertex Buffer + Vertex Layout -> Vertex Shader
 
 ```c++
 	/// Create the vertex buffer with Desc & Data
@@ -236,3 +242,5 @@ void Render()
 삼각형의 실제 렌더링을 수행하는 코드이며, 렌더링을 위해 Vertex Shader와 Pixel Shader를 만들었다. Vertex Shader는 삼각형 각각의 정점을 올바른 위치로 변환하는 역할을 하고, Pixel Shader는 삼각형의 각 픽셀에 대한 최종 출력 색상을 계산한다 (사실 완전한 최종은 아니다 Output Merger Stage가 있기 때문).
 
 ID3D11DeviceContext::VSSetShader() 와 ID3D11DeviceContext::PSSetShader()를 호출해 셰이더를 사용한다. 마지막으로 ID3D11DeviceContext::Draw()를 호출하여 현재 Vertex Buffer, Vertex Layout 및 Primitive Topology를 사용하여 삼각형을 렌더링하도록 GPU에 명령한다. Draw()의 첫 번째 파라미터는 GPU에 전송할 버텍스 수이고, 두 번째 파라미터는 전송을 시작할 첫 번째 버텍스의 인덱스이다. 하나의 삼각형을 렌더링하고 Vertex Buffer의 시작부터 렌더링하기 때문에 두 매개변수에 각각 3과 0을 사용한다.
+
+![image](../assets/images/D3D/triangle2.png){: .align-center}
