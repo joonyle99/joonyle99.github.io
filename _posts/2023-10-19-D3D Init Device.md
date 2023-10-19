@@ -7,18 +7,17 @@ title:  "DirectX 3D 11 Tutorial 01 - Init Device"
 
 목표 : DirectX3D 11의 필수 객체와 초기화 하는 방법에 대해 알아본다.
 
-필요 객체
 1. Device
 2. Device Context
 3. Swap Chain
 4. Render Target View
 
-Device : 리소스 생성 및 관리를 담당. 버퍼, 텍스처, 셰이더 등을 생성할 때 이 객체를 사용
-Device Context : 실제 렌더링 명령을 하드웨어에 전달하는 역할
+> Device : 리소스 생성 및 관리를 담당. 버퍼, 텍스처, 셰이더 등을 생성할 때 이 객체를 사용
+> Device Context : 실제 렌더링 명령을 하드웨어에 전달하는 역할
 
 DirectX3D 10에서는 Device가 렌더링과 리소스 생성 둘 다 수행했는데, DirectX3D 11에서는 역할을 나눠 Device Context를 통해 백버퍼에 렌더링을 수행하고, Device는 리소스를 생성하는 함수를 실행한다.
 
-![image](https://techpubs.jurassic.nl/manuals/nt/developer/Perf_GetStarted/sgi_html/figures/double.buffering.gif)
+![image](https://techpubs.jurassic.nl/manuals/nt/developer/Perf_GetStarted/sgi_html/figures/double.buffering.gif){: .align-center}
 
 Swap Chain : Device가 렌더링된 백버퍼를 가져와 실제 모니터 화면에 콘텐츠를 표시하는 역할을 담당
 
