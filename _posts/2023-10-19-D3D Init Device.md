@@ -13,8 +13,6 @@ DirectX3D 11의 필수 객체와 초기화 하는 방법에 대해 알아본다.
 3. Swap Chain
 4. Render Target View
 
----
-
 ### Device & Device Context
 ---
 
@@ -77,7 +75,7 @@ hr = D3D11CreateDeviceAndSwapChain(nullptr, g_driverType, nullptr, createDeviceF
 	if (FAILED(hr))
 		return FALSE;
 
-	hr = g_pDevice->CreateRenderTargetView(pBackBuffer, nullptr, &g_pRenderTargetView);
+	hr = g_pDevice->CreateRenderTargetView(pBackBuffer, nullptr, &g_pRenderTargetView); // 두 번째 파라미터는 선택적
 
 	// COM(구성 요소 개체 모델)에서는 메모리 관리를 위해 참조 카운트(reference count)를 사용합니다.
 	// 백 버퍼를 생성할 때 참조 카운트가 증가하므로, 이를 사용한 후 반드시 참조 카운트를 감소시켜야 합니다.

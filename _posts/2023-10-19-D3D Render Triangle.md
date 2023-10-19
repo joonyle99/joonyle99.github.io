@@ -5,6 +5,8 @@ title:  "DirectX 3D 11 Tutorial 02 - Render Triangle"
 
 ---
 
+![image](https://learn.microsoft.com/en-us/windows/win32/direct3d9/images/dip-fig2.png){: .align-center}
+
 DirectX3D 11에서는 Vertex 정보가 Buffer Resource에 저장된다. Vertex 정보를 저장하는 데 사용되는 Buffer를 Vertex Buffer라고 한다.  Vertex Buffer를 세 개의 Vertex가 들어갈 수 있을 만큼 충분히 큰 Vertex Buffer를 생성하고 Vertex들로 채워야 한다.
 
 DirectX3D 11에서는 Buffer Resource를 생성할 때 Buffer 크기를 Byte 단위로 지정해야 한다. Buffer가 Vertex 세 개가 들어갈만큼 충분히 커야 한다는 것은 알고 있지만 각 Vertex에는 몇 Byte가 필요할까? 이 질문에 답하려면 Vertex Layout에 대한 이해가 필요하다.
@@ -46,7 +48,7 @@ DirectX3D 11에서는 Buffer Resource를 생성할 때 Buffer 크기를 Byte 단
 	};
 ```
 
-Vertex에는 Position 좌표가 있거나, Normal Vector, Color, Texture 좌표(Texture Maping) 등과 같은 다른 속성도 가지고 있는 경우가 많다. Vertex Layout은 각 속성이 사용하는 데이터 유형, 각 속성의 크기, 메모리 내 속성의 순서 등 이러한 속성이 메모리에 위치하는 방식을 정의한다. 버텍스의 크기는 구조체의 크기에서 편리하게 구할 수 있습니다.
+위 코드처럼 Vertex에는 Position 좌표가 있거나, Normal Vector, Color, Texture 좌표(Texture Maping) 등과 같은 다른 속성도 가지고 있는 경우가 많다. Vertex Layout은 각 속성이 사용하는 데이터 유형, 각 속성의 크기, 메모리 내 속성의 순서 등 이러한 속성이 메모리에 위치하는 방식을 정의한다.
 
 ```c++
 struct SimpleVertex
@@ -55,7 +57,7 @@ struct SimpleVertex
 };
 ```
 
-이 튜토리얼에서는 정점의 위치로만 작업한다. 따라서 Vertex를 XMFLOAT3 유형의 단일 필드로 Struct 구조체에 정의한다.
+이 튜토리얼에서는 정점의 '위치'로만 작업한다. 따라서 Vertex를 XMFLOAT3 유형의 단일 필드로 Struct 구조체에 정의한다.
 
 ```c++
     // Define Triangle vertices
@@ -67,7 +69,7 @@ struct SimpleVertex
 	};
 ```
 
-이제 버텍스를 나타내는 구조체가 생겼다. 이는 시스템 메모리에 Vertex 정보를 저장하는 역할을 한다. 하지만 Vertex 정보만 들어있는 Vertex Buffer를 GPU에 전달하는 것은 메모리 덩어리를 전달하는 것에 불과할 것이다. Buffer에서 Vertex의 올바른 속성을 추출하려면 GPU가 Vertex Layout 대해서도 알고 있어야 한다.
+이제 버텍스를 나타내는 구조체가 생겼다. 이는 시스템 메모리에 정점 정보를 저장하는 역할을 한다. 하지만 정점 정보만 들어있는 Vertex Buffer를 GPU에 전달하는 것은 메모리 덩어리를 전달하는 것에 불과하다. Buffer에서 Vertex의 올바른 속성을 추출하려면 GPU가 Vertex Layout 대해서도 알고 있어야 한다.
 
 -> Vertex 정점 정보가 가진 속성을 적절히 GPU에 전달하기 위해서는 Input Layout을 사용한다.
 
@@ -90,14 +92,16 @@ struct SimpleVertex
 
 	// Set the input layout
 	g_pDeviceContext->IASetInputLayout(g_pVertexLayout);
-
 ```
 
 DirectX3D 11에서 Input Layout은 GPU가 이해할 수 있는 방식으로 Vertex의 구조를 설명한다. 각 Vertex의 속성은 D3D11_INPUT_ELEMENT_DESC 구조체로 설명할 수 있다. D3D11_INPUT_ELEMENT_DESC를 하나 이상의 배열로 정의한 다음, 해당 배열을 사용하여 Vertex 전체를 설명하는 Input Layout 객체를 생성한다.
 
-이제 Shader에 대해 알아보자. Vertex Shader는 Vertex Layout과 긴밀하게 결합되어 있는데, 그 이유는 Vertex Layout 오브젝트를 생성하려면 Vertex Shader의 Input Signature 필요하기 때문이다. 위 그림에서 POSITION이 Input Signature이다.
+### Vertex Layout & Vertex Shader
+---
 
-D3DCompileFromFile에서 도출된 ID3DBlob 객체를 사용하여 Vertex Shader의 Input Signature를 나타내는 Blob을 확보한다. 
+Vertex Shader는 Vertex Layout과 긴밀하게 결합되어 있는데, 그 이유는 Vertex Layout 오브젝트를 생성하려면 Vertex Shader의 Input Signature 가 필요하기 때문이다. 위 그림에서 'POSITION'이 Input Signature이다.
+
+D3DCompileFromFile()에서 도출된 ID3DBlob 객체를 사용하여 Vertex Shader의 Input Signature를 나타내는 Blob을 확보한다. 
 
 이후 ID3D11Device::CreateInputLayout()을 호출하여 Vertex Layout 객체를 생성하고,
 
