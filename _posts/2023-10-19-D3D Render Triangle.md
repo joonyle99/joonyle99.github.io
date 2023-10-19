@@ -5,8 +5,6 @@ title:  "DirectX 3D 11 Tutorial 02 - Render Triangle"
 
 ---
 
-![image](https://postfiles.pstatic.net/MjAyMzEwMTJfMjE1/MDAxNjk3MDkyNDI0MDk4.zSKPpf37Vm4afqK9HLRT-I9rsNSoE64LAUVhv1ISoOwg.6cxi20xC4LIbpaLIkRXgm9ETwMbtKQHria9kxwT4Mt8g.PNG.gongjunyeol/image.png?type=w773){: .align-center}
-
 DirectX3D 11에서는 Vertex 정보가 Buffer Resource에 저장된다. Vertex 정보를 저장하는 데 사용되는 Buffer를 Vertex Buffer라고 한다.  Vertex Buffer를 세 개의 Vertex가 들어갈 수 있을 만큼 충분히 큰 Vertex Buffer를 생성하고 Vertex들로 채워야 한다.
 
 DirectX3D 11에서는 Buffer Resource를 생성할 때 Buffer 크기를 Byte 단위로 지정해야 한다. Buffer가 Vertex 세 개가 들어갈만큼 충분히 커야 한다는 것은 알고 있지만 각 Vertex에는 몇 Byte가 필요할까? 이 질문에 답하려면 Vertex Layout에 대한 이해가 필요하다.
@@ -59,7 +57,7 @@ struct SimpleVertex
 
 이 튜토리얼에서는 정점의 위치로만 작업한다. 따라서 Vertex를 XMFLOAT3 유형의 단일 필드로 Struct 구조체에 정의한다.
 
-​```c++
+```c++
     // Define Triangle vertices
 	const SimpleVertex vertices[] =
 	{
@@ -70,8 +68,6 @@ struct SimpleVertex
 ```
 
 이제 버텍스를 나타내는 구조체가 생겼다. 이는 시스템 메모리에 Vertex 정보를 저장하는 역할을 한다. 하지만 Vertex 정보만 들어있는 Vertex Buffer를 GPU에 전달하는 것은 메모리 덩어리를 전달하는 것에 불과할 것이다. Buffer에서 Vertex의 올바른 속성을 추출하려면 GPU가 Vertex Layout 대해서도 알고 있어야 한다.
-
-​
 
 -> Vertex 정점 정보가 가진 속성을 적절히 GPU에 전달하기 위해서는 Input Layout을 사용한다.
 
