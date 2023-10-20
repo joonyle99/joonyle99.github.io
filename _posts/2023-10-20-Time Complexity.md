@@ -20,11 +20,10 @@ title:  "코딩 테스트 복잡도 가늠하기"
 * O(2^N) : 약 20번
 * O(N!) : 11번
 
-<br>
-
 ![image](https://blog.kakaocdn.net/dn/nWbDr/btqYkaZqOuE/xFOyFSEYKbp2Wlz0xQ7lSk/img.png){: .align-center}
 
 ### 제한 시간이 1초일 경우, N의 범위에 따른 시간 복잡도 선택
+---
 * N의 범위가 500: 시간 복잡도가 O(N^3) 이하인 알고리즘을 설계
 * N의 범위가 2,000: 시간 복잡도가 O(N^2) 이하인 알고리즘을 설계
 * N의 범위가 100,000: 시간 복잡도가 O(NlogN) 이하인 알고리즘을 설계
