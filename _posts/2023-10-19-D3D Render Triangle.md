@@ -6,14 +6,14 @@ title:  "DirectX 3D 11 Tutorial 02 - Render Triangle"
 ### 목표
 ---
 
-Vertex Buffer, Input Layout, Blob, Triangle List, Triangle Strip 등 삼각형을 렌더하기 위한 방법에 대해 알아본다.
+Vertex Buffer, Input Layout, Blob, Triangle List, Triangle Strip 등 D3D에서 삼각형을 그리기 위한 과정에 대해 알아본다.
 
-### Vertex Buffer
+### Vertex & Vertex Buffer
 ---
 
 ![image](https://learn.microsoft.com/en-us/windows/win32/direct3d9/images/dip-fig2.png){: .align-center}
 
-DirectX3D 11에서는 정점 정보가 Buffer Resource에 저장된다. 정점 정보를 저장하는 데 사용되는 Buffer를 Vertex Buffer라고 한다.
+DirectX3D 11에서는 삼각형의 정점 정보가 Buffer Resource에 저장된다. 정점 정보를 저장하는 데 사용되는 Buffer를 Vertex Buffer라고 한다.
 
 ```c++
 Vertex vertices[] =
@@ -61,7 +61,7 @@ Vertex vertices[] =
 	};
 ```
 
-이 튜토리얼에서는 정점의 '위치'로만 작업한다. 따라서 Vertex를 XMFLOAT3 유형의 단일 필드로 Struct 구조체에 정의한다.
+이 튜토리얼에서는 정점의 'Position'으로만 작업한다. 따라서 Vertex를 XMFLOAT3 유형의 단일 필드로 Struct 구조체에 정의한다.
 
 ```c++
     // Define Triangle vertices
@@ -73,9 +73,9 @@ Vertex vertices[] =
 	};
 ```
 
-이제 정점을 나타내는 구조체가 생겼다. 이는 시스템 메모리에 정점 정보를 저장하는 역할을 한다. 하지만 정점 정보만 들어있는 Vertex Buffer를 GPU에 전달하는 것은 메모리 덩어리를 전달하는 것에 불과하다. Buffer에서 Vertex의 올바른 속성을 추출하려면 GPU가 Vertex의 Layout 대해서도 알고 있어야 한다.
+이제 정점을 나타내는 구조체가 생겼다. 이는 시스템 메모리에 정점 정보를 저장하는 역할을 한다. 하지만 정점 정보만 들어있는 Vertex Buffer를 GPU에 전달하는 것은 메모리 덩어리를 전달하는 것에 불과하다. Buffer에서 Vertex의 올바른 속성을 추출하려면 GPU가 Vertex의 Layout에 대해서도 알고 있어야 한다.
 
-### Input Layout (Vertex Layout)
+### Input Layout
 ---
 
 ```c++
@@ -144,9 +144,9 @@ D3DCompileFromFile()에서 도출된 ID3DBlob 객체를 사용하여 Shader 파�
 	g_pDeviceContext->IASetInputLayout(g_pVertexLayout);
 ```
 
-이후 ID3D11Device::CreateInputLayout()을 호출하여 Vertex Layout 객체를 생성하고, ID3D11DeviceContext::IASetInputLayout()을 호출하여 Vertex Layout을 파이프라인에 설정할 수 있다.
+이후 ID3D11Device::CreateInputLayout()을 호출하여 Input Layout 객체를 생성하고, ID3D11DeviceContext::IASetInputLayout()을 호출하여 Input Layout을 파이프라인에 설정할 수 있다.
 
-> Vertex Buffer + Vertex Layout -> Vertex Shader
+> Vertex Buffer + Vertex(Input) Layout -> Vertex Shader
 
 ```c++
 	/// Create the vertex buffer with Desc & Data
