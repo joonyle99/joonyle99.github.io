@@ -3,6 +3,8 @@ layout: single
 title:  "기술 면접 - CS (Architecture, O/S, Network)"
 ---
 
+---
+
 ### VM (Virtual Machine)에 대해
 ---
 
@@ -20,4 +22,3 @@ title:  "기술 면접 - CS (Architecture, O/S, Network)"
 
 ### 메모리 레이아웃에 대해 (Code, Data, Heap, Stack)
 ---
-

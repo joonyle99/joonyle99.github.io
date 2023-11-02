@@ -1,6 +1,6 @@
 ---
-title: "About Page"
+title: "Tag Page"
 layout: single
-permalink: /about/
+permalink: /tags/
 author_profile: true
 ---

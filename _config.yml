@@ -19,7 +19,7 @@ minimal_mistakes_skin    : "custom" # "air", "aqua", "contrast", "dark", "dirt",
 locale                   : "ko-KR" # 블로그의 주요 언어입니다. 한국어로 보려고 ko-KR로 설정했습니다.
 title                    : "joonyle99's Blog" # Meta 태그에 들어가는 영역. masthead_title등이 없으면 기본값으로 나온다.
 title_separator          : "-"
-subtitle                 : "Version 1.0" # 타이틀 아래에 나올 작은 글씨
+subtitle                 : "" # 타이틀 아래에 나올 작은 글씨
 name                     : "Junyeol Gong" # 맨 하단 이름 찍히는 영역
 description              : "개발 공부를 기록하는 블로그" # Meta 태그에 들어가는 영역
 url                      : "https://joonyle99.github.io" # GitBlog 호스트 주소
@@ -29,10 +29,8 @@ teaser                   : # path of fallback teaser image, e.g. "/assets/images
 logo                     : # path of logo image to display in the masthead, e.g. ""/assets/images/logo/github_unicon.png""
 masthead_title           : "joonyle99's Blog" # 홈페이지 최상단에 들어갈 타이틀
 
-
-published                : true # 작성한 글을 공개/비공개하는 설정
+published                : true # 작성한 글을 공개 / 비공개하는 설정
 future                   : true # 포스팅 일자가 현재시각보다 미래인 경우에도 표시되도록 설정해주는 것
-
 
 breadcrumbs              : true # true, false (default)
 words_per_minute         : # 200 # 해당 포스트 읽는데 걸리는 시간을 계산하기 위해 대락 분당 읽는 수가 몇글자가 될지 적는 공간.

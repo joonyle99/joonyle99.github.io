@@ -3,6 +3,8 @@ layout: single
 title:  "기술 면접 - Graphics & Math"
 ---
 
+---
+
 ### 인덱스 버퍼 (Index Buffer)에 대해
 ---
 
@@ -26,4 +28,3 @@ title:  "기술 면접 - Graphics & Math"
 
 ### 렌더링 파이프라인 (Rendering Pipeline)에 대해
 ---
-
