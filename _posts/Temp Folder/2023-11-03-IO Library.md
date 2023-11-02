@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "C++ IO Library"
+title:  "입출력 라이브러리"
 ---
 
 ---
@@ -8,23 +8,24 @@ title:  "C++ IO Library"
 ### 목표
 ---
 
-istream, ostream 클래스와 >>, << 연산자에 대해 알아보고 C++에서의 입출력에 대해 알아본다.
+istream, ostream 클래스와 >>, << operator에 대해 알아보고 C++에서의 입출력에 대해 알아본다.
 
-### IO Library
+### 입출력 라이브러리
 ---
 
-![image](https://modoocode.com/img/2361DC4954A0CB38040ED8.webp){: .align-center}
+![](https://modoocode.com/img/2361DC4954A0CB38040ED8.webp){: .align-center}{: width="50%" height="50%"}
 
-C++의 모든 입출력 클래스는 ios_base를 기반 클래스로 한다. ios 클래스는 스트림 버퍼를 초기화 하고 현재 입출력 작업의 상태를 처리한다. eof()나 good() 함수를 이용해 현재 입출력 상태를 체크할 수 있다.
+C++의 모든 입출력 클래스는 `ios_base` 를 기반 클래스로 한다. `ios` 클래스는 <u>스트림 버퍼를 초기화 하고 현재 입출력 작업의 상태를 처리</u>한다. eof()나 good() 함수를 이용해 현재 입출력 상태를 체크할 수 있다.
 
-### istream & operator >>
+### istream과 operator >>
 ---
+
 
 ```c++
 std::cin >> a;
 ```
 
-실제로 입력을 수행하는 클래스이다. 'operator >>' 가 istream 클래스에 정의되어 있으며, 'cin'은 istream 클래스의 객체이다.
+`istream` 은 실제로 입력을 수행하는 클래스이다. `operator >>` 가 해당 클래스에 정의되어 있으며, `cin` 은 `istream` 클래스의 <u>객체</u>이다.
 
 ```c++
 istream& operator>>(bool& val);
@@ -55,23 +56,23 @@ istream& operator>>(void*& val);
 ```
 
 이 처럼 operator >> 는 다양한 자료형에 대해 오버로딩 되어있어, 타입 상관없이 입력을 받을 수 있는 것이다.
-그러면 여기 있는 자료형 말고는 operator >> 를 사용할 수 없을까? 답은 x이다.  
+
+그러면 여기 있는 자료형 말고는 `operator >>` 를 사용할 수 없을까? 답은 x이다.  
 
 ```c++
 std::string s;
 std::cin >> s;
 ```
 
-std::string은 cin으로 입력받을 수 있는데, 이유는 멤버 함수를 두는 것 말고도, 외부 함수로 연산자 오버로딩을 할 수 있기 때문이다.
+`std::string` 은 cin으로 입력받을 수 있는데, 이유는 멤버 함수를 두는 것 말고도, <u>외부 함수로 연산자 오버로딩을 할 수 있기 때문이다.</u>
 
 ```c++
-istream& operator>>(istream& in, std::string& s)
+// istream 클래스가 아닌 외부에서 오버로딩한다.
+istream& operator >> (istream& in, std::string& s)
 {
   // 구현한다
 }
 ```
-
-<br>
 
 <!--
 
@@ -127,4 +128,3 @@ operator void*() const;
 이 함수는 ios 객체를 void*로 변환하는데, failbit와 badbit가 모두 off라면 nullptr가 아닌 값을 리턴한다. 즉 스트림에 정상적으로 입출력 작업을 수행 할 수 있을 때만 nullptr이 아닌 값을 리턴한다는 것이다. 따라서 while()문이 정상적인 입출력인 경우에만 실행되는 코드가 된다.
 
 -->
-
