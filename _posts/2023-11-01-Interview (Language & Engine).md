@@ -51,7 +51,7 @@ title:  "기술 면접 - Language (C# / C++) & Engine (Unity)"
 ### Unity의 Life Cycle 대해
 ---
 
-![](/assets/images/unity/lifecycle.png){: .align-center} *image caption*
+![](/assets/images/unity_lifecycle.png){: .align-center} *image caption*
 
 Unity 스크립트를 실행하면 미리 결정된 순서에 여러 이벤트 함수가 실행된다.
 

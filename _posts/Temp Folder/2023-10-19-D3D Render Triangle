@@ -185,7 +185,7 @@ DirectX3D 11에서 Vertex Buffer를 생성하려면 두 개의 구조체, D3D11_
 ### Triangle List & Triangle Strip
 ---
 
-![image](../assets/images/D3D/triangle.png){: .align-center}
+![image](../assets/images/d3d_triangle.png){: .align-center}
 
 하나의 삼각형을 렌더링하기 위해서는 3개의 정점을 GPU로 전송해야 한다. 따라서 Vertex Buffer에는 3개의 Vertex가 있다. 두 개의 삼각형을 렌더링하려면 어떻게 해야 할까? 한 가지 방법은 GPU에 6개의 정점을 보내는 것이다. 처음 세 개의 정점은 첫 번째 삼각형을 정의하고 두 번째 세 개의 정점은 두 번째 삼각형을 정의한다. 이 Topology를 Triangle List라고 한다. Triangle List는 이해하기 쉽다는 장점이 있지만, 매우 비효율적이다. 연속적으로 렌더링된 삼각형이 정점을 공유할 때 이러한 경우가 발생한다. 예를 들어 그림 3a는 두 개의 삼각형으로 구성된 정사각형을 보여준다 (일반적으로 삼각형은 정점을 시계 방향으로 나열하여 정의). Triangle List를 사용하여 이 두 삼각형을 GPU에 전송하면 vertex Buffer는 다음과 같은 상태가 된다.
 
@@ -245,4 +245,4 @@ ID3D11DeviceContext::VSSetShader() 와 ID3D11DeviceContext::PSSetShader()를 호
 
 <br>
 
-![image](../assets/images/D3D/triangle2.png){: .align-center}
+![image](../assets/images/d3d_renderTriangle.png){: .align-center}
