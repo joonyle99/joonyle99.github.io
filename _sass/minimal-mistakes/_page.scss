@@ -73,7 +73,7 @@ body {
   line-height: 1;
 
   a {
-    color: $text-color;
+    color: rgb(246, 216, 24); // $text-color; // 텍스트 컬러가 일괄 적용되기 때문에 제목의 색상만 바꾸려면 따로 색상을 정해준다.
     text-decoration: none;
   }
 

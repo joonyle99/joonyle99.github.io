@@ -12,25 +12,30 @@
 
 # theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "custom" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise", "custom"
+
 
 # Site Settings
-published                : true
-locale                   : "ko-KR"
-title                    : "joonyle99's Blog"
+locale                   : "ko-KR" # 블로그의 주요 언어입니다. 한국어로 보려고 ko-KR로 설정했습니다.
+title                    : "joonyle99's Blog" # Meta 태그에 들어가는 영역. masthead_title등이 없으면 기본값으로 나온다.
 title_separator          : "-"
-subtitle                 : # site tagline that appears below site title in masthead
-name                     : "Junyeol Gong"
-description              : ""
-url                      : "https://joonyle99.github.io"
+subtitle                 : "Version 1.0" # 타이틀 아래에 나올 작은 글씨
+name                     : "Junyeol Gong" # 맨 하단 이름 찍히는 영역
+description              : "개발 공부를 기록하는 블로그" # Meta 태그에 들어가는 영역
+url                      : "https://joonyle99.github.io" # GitBlog 호스트 주소
 baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+repository               : "https://github.com/joonyle99" # GitHub username/repo-name e.g. "https://github.com/joonyle99"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
-masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
-future                   : true
-# breadcrumbs            : false # true, false (default)
-words_per_minute         : 200
+logo                     : # path of logo image to display in the masthead, e.g. ""/assets/images/logo/github_unicon.png""
+masthead_title           : "joonyle99's Blog" # 홈페이지 최상단에 들어갈 타이틀
+
+
+published                : true # 작성한 글을 공개/비공개하는 설정
+future                   : true # 포스팅 일자가 현재시각보다 미래인 경우에도 표시되도록 설정해주는 것
+
+
+breadcrumbs              : true # true, false (default)
+words_per_minute         : # 200 # 해당 포스트 읽는데 걸리는 시간을 계산하기 위해 대락 분당 읽는 수가 몇글자가 될지 적는 공간.
 comments:
   provider               : # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
   disqus:
@@ -74,12 +79,15 @@ algolia:
 google:
   search_engine_id       : # YOUR_SEARCH_ENGINE_ID
   instant_search         : # false (default), true
+
+
 # SEO Related
 google_site_verification :
 bing_site_verification   :
 naver_site_verification  :
 yandex_site_verification :
 baidu_site_verification  :
+
 
 # Social Sharing
 twitter:
@@ -89,12 +97,15 @@ facebook:
   app_id                 :
   publisher              :
 og_image                 : # Open Graph/Twitter default site image
+
+
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
   type                   : # Person or Organization (defaults to Person)
   name                   : # If the user or organization name differs from the site's name
   links: # An array of links to social media profiles
+
 
 # Analytics
 analytics:
@@ -109,7 +120,7 @@ author:
   name             : "Junyeol Gong"
   avatar           : "/assets/images/logo/github_unicon.png"
   bio              : "개발 공부 블로그"
-  location         : "South Korea"
+  location         : "Republic of Korea"
   email            : 
   links:
     - label: "gongjunyeol@gmail.com"
@@ -130,6 +141,7 @@ author:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
+
 
 # Site Footer
 footer:
@@ -220,7 +232,7 @@ sass:
 
 # Outputting
 permalink: /:categories/:title/
-paginate: 5 # amount of posts to show
+paginate: 20 # default : 5
 paginate_path: /page:num/
 timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
@@ -232,6 +244,7 @@ plugins:
   - jekyll-gist
   - jekyll-feed
   - jekyll-include-cache
+
 
 # mimic GitHub Pages with --safe
 whitelist:
@@ -288,9 +301,17 @@ defaults:
     values:
       layout: single
       author_profile: true
-      read_time: true
-      comments: true
-      share: true
-      related: true
-      use_math: true
-      mathjax: true
+      read_time: false # words_per_minute 표시
+      comments: true # 댓글 기능
+      share: true # SNS 공유 기능
+      related: false # 관련 포스팅을 표시
+      use_math: true # 기본적으로 use_math 사용
+      mathjax: true # 웹 브라우저에 수학 표기법을 표시하는 라이브러리 mathjax 사용
+
+  # _pages
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+      layout: single
+      author_profile: true

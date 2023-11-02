@@ -11,15 +11,15 @@ html {
   font-size: 16px;
 
   @include breakpoint($medium) {
-    font-size: 16px; // defalut 18
+    font-size: 16px; // defalut 18 // 본문 사이즈
   }
 
   @include breakpoint($large) {
-    font-size: 16px; // defalut 20
+    font-size: 16px; // defalut 20 // 마크다운 문법
   }
 
   @include breakpoint($x-large) {
-    font-size: 16px; // defalut 22
+    font-size: 16px; // defalut 22 // 제목 사이즈
   }
 
   -webkit-text-size-adjust: 100%;

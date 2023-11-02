@@ -1,13 +1,10 @@
 # main links
 main:
-  - title: "Quick-Start Guide"
-    url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
+  - title: "Categories"
+    url: /categories/ # http://naver.com과 같이 상대경로가 아닌 절대경로도 가능합니다.
+  - title: "Tags"
+    url: /tags/
   - title: "About"
-    url: https://mmistakes.github.io/minimal-mistakes/about/
-  - title: "Sample Posts"
-    url: /year-archive/
-  - title: "Sample Collections"
-    url: /collection-archive/
-  - title: "Sitemap"
-    url: /sitemap/
-  
+    url: /about/
+  - title: "연도별 포스트"
+    url: /posts/
