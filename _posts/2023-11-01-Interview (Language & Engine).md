@@ -53,13 +53,53 @@ title:  "기술 면접 - Language (C# / C++) & Engine (Unity)"
 ### Unity의 Life Cycle 대해
 ---
 
-![](/assets/images/unity_lifecycle.png){: .align-center}
-*Unity Script Life Cycle*
+Unity 스크립트는 사용자가 따로 호출하지 않아도 호출되는 함수가 있다. 그러한 함수들의 호출 주기를 생명주기(Life Cycle)라고 한다. 이러한 함수들의 호출 시기는 Programmable 하지 않기 때문에, 미리 정해져있는 이러한 함수들의 생명주기를 이해하는 것이 Unity를 다루는데 필수적이다.
+
+유니티 스크립트 라이프 사이클 문서 : 
+[Unity Documentation - Life Cycle](https://docs.unity3d.com/Manual/ExecutionOrder.html#BeforeTheFirstFrameUpdate)
 
 <br>
 
-Unity 스크립트를 실행하면 미리 결정된 순서에 여러 이벤트 함수가 실행된다.
+![](/assets/images/unity_simpleLifeCycle.png){: width="50%" height="50%"}{: .align-center}
+*간소화된 유니티의 생명주기*
 
+#### 초반 단계
+
+* Reset : 인스펙터 창에서 리셋 버튼을 눌렀을 때 호출되며, 객체의 속성을 초기화한다. (Editor 전용 함수)
+* Awake : 오브젝트에 컴포넌트로 붙어있는 스크립트가 실행될 때 한번만 호출된다. (활성화가 되어있지 않아도 호출)
+* OnEnable : 오브젝트가 활성화 될 때마다 호출된다.
+* Start : Update 함수가 호출되기 전에 한번만 호출된다. 다른 스크립트의 모든 Awake 함수가 호출된 이후에 실행된다.
+
+![](/assets/images/unity_lifecycle03.png){: width="50%" height="50%"}{: .align-center}
+*오브젝트와 스크립트가 모두 활성화된 상태*
+
+![](/assets/images/unity_lifecycle02.png){: width="60%" height="60%"}{: .align-center}
+*Awake -> OnEnable -> Start 순으로 호출*
+
+<br>
+<br>
+
+![](/assets/images/unity_lifecycle06.png){: width="50%" height="50%"}{: .align-center}
+*Reset함수는 인스펙터 창에서 리셋 버튼을 눌렀을 때 호출*
+
+![](/assets/images/unity_lifecycle05.png){: width="50%" height="50%"}{: .align-center}
+*Awake함수는 스크립트가 활성화 되어있지 않아도 호출*
+
+
+#### 업데이트 단계
+
+* Reset : 인스펙터 창에서 리셋 버튼을 눌렀을 때 호출되며, 객체의 속성을 초기화한다. (Editor 전용 함수)
+* Awake : 오브젝트에 컴포넌트로 붙어있는 스크립트가 실행될 때 한번만 호출된다. (활성화가 되어있지 않아도 호출)
+* OnEnable : 오브젝트가 활성화 될 때마다 호출된다.
+* Start : Update 함수가 호출되기 전에 한번만 호출된다. 다른 스크립트의 모든 Awake 함수가 호출된 이후에 실행된다.
+
+
+#### 마무리 단계
+
+* Reset : 인스펙터 창에서 리셋 버튼을 눌렀을 때 호출되며, 객체의 속성을 초기화한다. (Editor 전용 함수)
+* Awake : 오브젝트에 컴포넌트로 붙어있는 스크립트가 실행될 때 한번만 호출된다. (활성화가 되어있지 않아도 호출)
+* OnEnable : 오브젝트가 활성화 될 때마다 호출된다.
+* Start : Update 함수가 호출되기 전에 한번만 호출된다. 다른 스크립트의 모든 Awake 함수가 호출된 이후에 실행된다.
 
 
 ### 코루틴의 호출 시점
