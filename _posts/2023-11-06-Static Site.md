@@ -10,4 +10,4 @@ title:  "정적 웹 페이지(Static Web Page)"
 깃허브 블로그를 작성하는데 로컬 환경에서 테스트해 보기 위해 사용하는 명령어 `bundle exec jekyll serve`를 사용하는데, Jekyll이라는 정적 사이트 생성기(Static Web Page Generator)를 사용해 내가 구성한 웹 페이지를 정적으로 생성해 준다.
 
 ![](/assets/images/curious_staticWebPage.png)
-*로컬 환경에서 테스트하는 깃허브 블로그*
+*로컬 환경에서 테스트하는 깃허브 블로그 (주소 - localhost:4000)*
