@@ -1,8 +1,8 @@
 ---
 layout: single
-title:  "C++ - 전위 연산자 & 후위 연산자"
+title:  "Cpp - 전위 연산자 & 후위 연산자"
 categories:
-  - Cpp
+  - cpp
 ---
 
 ---

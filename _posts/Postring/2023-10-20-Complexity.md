@@ -1,8 +1,8 @@
 ---
 layout: single
-title:  "Coding Test 01 - 시간 & 공간 복잡도 가늠하기"
+title:  "Algorithm - 시간 & 공간 복잡도 가늠하기"
 categories:
-  - CodingTest
+  - algorithm
 ---
 
 ---

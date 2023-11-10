@@ -1,6 +1,8 @@
 ---
 layout: single
-title:  "입출력 라이브러리"
+title:  "Cpp - 입출력 라이브러리"
+categories:
+  - cpp
 ---
 
 ---

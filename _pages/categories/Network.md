@@ -1,9 +1,9 @@
 ---
-title: "Unity"
+title: "Network"
 layout: archive
-permalink: /categories/unity
+permalink: /categories/network
 author_profile: true
 ---
 
-{% assign posts = site.categories.unity %}
+{% assign posts = site.categories.network %}
 {% for post in posts %} {% include archive-single2.html type=page.entries_layout %} {% endfor %}

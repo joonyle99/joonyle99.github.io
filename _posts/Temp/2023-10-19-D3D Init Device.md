@@ -1,6 +1,8 @@
 ---
 layout: single
-title:  "DirectX 3D 11 Tutorial 01 - Init Device"
+title:  "DirectX 11 - Init Device"
+categories:
+  - directX
 ---
 
 ---

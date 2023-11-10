@@ -2,7 +2,7 @@
 layout: single
 title:  "Interview - 자료구조 & 알고리즘"
 categories:
-  - Interview
+  - interview
 ---
 
 ---

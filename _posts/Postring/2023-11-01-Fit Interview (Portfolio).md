@@ -2,7 +2,7 @@
 layout: single
 title:  "Interview - 포트폴리오 & 경험"
 categories:
-  - Interview
+  - interview
 ---
 
 ---

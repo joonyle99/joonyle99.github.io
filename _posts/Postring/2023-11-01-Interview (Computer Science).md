@@ -1,8 +1,8 @@
 ---
 layout: single
-title:  "Interview - CS (Architecture, O/S, Network)"
+title:  "Interview - 운영체제 & 네트워크"
 categories:
-  - Interview
+  - interview
 ---
 
 ---

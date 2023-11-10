@@ -1,8 +1,8 @@
 ---
 layout: single
-title:  "기술 면접 - Language (C# / C++) & Engine (Unity)"
+title:  "Interview - 언어 & 유니티"
 categories:
-  - Interview
+  - interview
 ---
 
 ---

@@ -1,5 +1,29 @@
 # main links
 main:
+  - title: "Home"
+    url: /index.html
+  - title: "About"
+    url: /about/
+
+  # - title: "CPP"
+  #   url: /categories/cpp
+  # - title: "CSharp"
+  #   url: /categories/csharp
+  # - title: "Data Structure"
+  #   url: /categories/data_structure
+  # - title: "Algorithm"
+  #   url: /categories/algorithm
+  # - title: "Network"
+  #   url: /categories/network
+  # - title: "Programming"
+  #   url: /categories/programming
+  # - title: "Unity"
+  #   url: /categories/unity
+  # - title: "DirectX"
+  #   url: /categories/directX
+  # - title: "Math"
+  #   url: /categories/math
+  # - title: "Interview"
+  #   url: /categories/interview
+
 # http://naver.com과 같이 상대경로가 아닌 절대경로도 가능합니다.
-  - title: "Categories"
-    url: /categories/cs

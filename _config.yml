@@ -230,7 +230,7 @@ sass:
 
 # Outputting
 permalink: /:categories/:title/
-paginate: 20 # default : 5
+paginate: 5 # default : 5
 paginate_path: /page:num/
 timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
@@ -305,6 +305,7 @@ defaults:
       related: false # 관련 포스팅을 표시
       use_math: true # 기본적으로 use_math 사용
       mathjax: true # 웹 브라우저에 수학 표기법을 표시하는 라이브러리 mathjax 사용
+      sidebar_main: true
 
   # _pages
   - scope:

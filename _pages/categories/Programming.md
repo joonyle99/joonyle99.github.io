@@ -1,9 +1,9 @@
 ---
-title: "Unity"
+title: "Programming"
 layout: archive
-permalink: /categories/unity
+permalink: /categories/programming
 author_profile: true
 ---
 
-{% assign posts = site.categories.unity %}
+{% assign posts = site.categories.programming %}
 {% for post in posts %} {% include archive-single2.html type=page.entries_layout %} {% endfor %}
