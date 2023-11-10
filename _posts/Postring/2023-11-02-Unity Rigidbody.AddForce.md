@@ -1,6 +1,8 @@
 ---
 layout: single
 title:  "유니티 - Rigidbody.AddForce"
+categories:
+  - Unity
 ---
 
 ---

@@ -1,6 +1,8 @@
 ---
 layout: single
-title:  "인적성 면접 - 포트폴리오 & 경험"
+title:  "Interview - 포트폴리오 & 경험"
+categories:
+  - Interview
 ---
 
 ---

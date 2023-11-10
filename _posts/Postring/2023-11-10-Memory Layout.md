@@ -1,6 +1,8 @@
 ---
 layout: single
 title:  "메모리 레이아웃"
+categories:
+  - CS
 ---
 
 ---

@@ -1,6 +1,8 @@
 ---
 layout: single
 title:  "기술 면접 - Graphics & Math"
+categories:
+  - Interview
 ---
 
 ---

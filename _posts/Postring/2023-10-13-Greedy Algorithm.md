@@ -1,6 +1,8 @@
 ---
 layout: single
-title:  "그리디 알고리즘"
+title:  "Algorithm - 그리디 알고리즘"
+categories:
+  - Algorithm
 ---
 
 ---

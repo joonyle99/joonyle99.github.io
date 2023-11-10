@@ -1,6 +1,8 @@
 ---
 layout: single
-title:  "기술 면접 - Data Structure & Algorithm"
+title:  "Interview - 자료구조 & 알고리즘"
+categories:
+  - Interview
 ---
 
 ---

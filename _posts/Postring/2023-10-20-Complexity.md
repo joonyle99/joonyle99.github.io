@@ -1,6 +1,8 @@
 ---
 layout: single
-title:  "코딩 테스트 준비 01 - 시간 & 공간 복잡도 가늠하기"
+title:  "Coding Test 01 - 시간 & 공간 복잡도 가늠하기"
+categories:
+  - CodingTest
 ---
 
 ---

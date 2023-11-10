@@ -1,6 +1,8 @@
 ---
 layout: single
-title:  "기술 면접 - CS (Architecture, O/S, Network)"
+title:  "Interview - CS (Architecture, O/S, Network)"
+categories:
+  - Interview
 ---
 
 ---
