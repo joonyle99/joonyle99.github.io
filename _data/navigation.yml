@@ -1,8 +1,8 @@
 # main links
 main:
+  - title: "About"
+    url: /about/
   - title: "Categories"
     url: /categories/ # http://naver.com과 같이 상대경로가 아닌 절대경로도 가능합니다.
   - title: "Tags"
     url: /tags/
-  - title: "About"
-    url: /about/
