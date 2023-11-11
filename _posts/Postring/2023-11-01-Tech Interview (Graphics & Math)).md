@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "Interview - 그래픽스 & 수학"
+title:  "Tech Interview - 그래픽스 & 수학"
 categories:
   - interview
 ---

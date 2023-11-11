@@ -139,4 +139,4 @@ Direct3D 11에서 제공하는 인스턴스 컨텍스트 함수 ClearRenderTarge
 
 <br>
 
-![image](../assets/images/d3d_initScene.png){: .align-center}
+![image](/assets/images/d3d_initScene.png){: .align-center}

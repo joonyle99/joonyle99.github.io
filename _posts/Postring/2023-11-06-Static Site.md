@@ -1,8 +1,8 @@
 ---
 layout: single
-title:  "Programming - 정적 웹 페이지 (Static Web Page)"
+title:  "System Programming - 정적 웹 페이지 (Static Web Page)"
 categories:
-  - programming
+  - system_programming
 ---
 
 ---

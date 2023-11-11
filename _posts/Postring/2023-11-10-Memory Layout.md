@@ -1,8 +1,8 @@
 ---
 layout: single
-title:  "Data Structure - 메모리 레이아웃"
+title:  "System Programming - 메모리 레이아웃"
 categories:
-  - data_structure
+  - system_programming
 ---
 
 ---

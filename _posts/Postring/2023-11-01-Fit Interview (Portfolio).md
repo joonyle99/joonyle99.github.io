@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "Interview - 포트폴리오 & 경험"
+title:  "Fit Interview - 포트폴리오 & 경험"
 categories:
   - interview
 ---

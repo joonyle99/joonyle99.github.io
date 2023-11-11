@@ -8,18 +8,18 @@ html {
   /* apply a natural box layout model to all elements */
   box-sizing: border-box;
   background-color: $background-color;
-  font-size: 18;
+  font-size: 15;
 
   @include breakpoint($medium) {
     font-size: 18; // defalut 18 // 본문 사이즈
   }
 
   @include breakpoint($large) {
-    font-size: 18; // defalut 20 // 마크다운 문법
+    font-size: 20; // defalut 20 // 마크다운 문법
   }
 
   @include breakpoint($x-large) {
-    font-size: 18; // defalut 22 // 제목 사이즈
+    font-size: 22; // defalut 22 // 제목 사이즈
   }
 
   -webkit-text-size-adjust: 100%;
