@@ -2,7 +2,7 @@
 layout: single
 title:  "DirectX 11 - 삼각형 그리기"
 categories:
-  - directX
+  - directX11
 ---
 
 ---

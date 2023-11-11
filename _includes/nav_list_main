@@ -70,8 +70,8 @@
             </ul>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "directX" %}
-                        <li><a href="/categories/directX" class="" style="font-size: 18px"> DirectX ({{category[1].size}}) </a></li>
+                    {% if category[0] == "directX11" %}
+                        <li><a href="/categories/directX11" class="" style="font-size: 18px"> 다이렉트X 11 ({{category[1].size}}) </a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
