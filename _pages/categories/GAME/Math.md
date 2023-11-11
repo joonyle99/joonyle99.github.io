@@ -1,5 +1,5 @@
 ---
-title: "Math"
+title: "수학"
 layout: archive
 permalink: /categories/math
 author_profile: true

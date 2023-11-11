@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "DirectX 11 - Init Device"
+title:  "DirectX 11 - 초기화"
 categories:
   - directX
 ---

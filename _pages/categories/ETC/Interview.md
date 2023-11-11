@@ -1,5 +1,5 @@
 ---
-title: "Interview"
+title: "면접"
 layout: archive
 permalink: /categories/interview
 author_profile: true

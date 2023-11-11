@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "DirectX 11 - Shader"
+title:  "DirectX 11 - 셰이더"
 categories:
   - directX
 ---

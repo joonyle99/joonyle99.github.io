@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "DirectX 11 - Render Triangle"
+title:  "DirectX 11 - 삼각형 그리기"
 categories:
   - directX
 ---
