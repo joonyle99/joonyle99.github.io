@@ -19,15 +19,15 @@
         <span class="nav__sub-title" style="font-size: 20px"> Language </span>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "data_structure" %}
-                        <li><a href="/categories/data_structure" class="" style="font-size: 18px"> C++ ({{category[1].size}}) </a></li>
+                    {% if category[0] == "cpp" %}
+                        <li><a href="/categories/cpp" class="" style="font-size: 18px"> C++ ({{category[1].size}}) </a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "algorithm" %}
-                        <li><a href="/categories/algorithm" class="" style="font-size: 18px"> C# ({{category[1].size}}) </a></li>
+                    {% if category[0] == "csharp" %}
+                        <li><a href="/categories/csharp" class="" style="font-size: 18px"> C# ({{category[1].size}}) </a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
@@ -48,60 +48,45 @@
             </ul>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "algorithm" %}
-                        <li><a href="/categories/algorithm" class="" style="font-size: 18px"> 네트워크 ({{category[1].size}}) </a></li>
+                    {% if category[0] == "network" %}
+                        <li><a href="/categories/network" class="" style="font-size: 18px"> 네트워크 ({{category[1].size}}) </a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "algorithm" %}
-                        <li><a href="/categories/algorithm" class="" style="font-size: 18px"> 프로그래밍 ({{category[1].size}}) </a></li>
+                    {% if category[0] == "programming" %}
+                        <li><a href="/categories/programming" class="" style="font-size: 18px"> 프로그래밍 ({{category[1].size}}) </a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
         <span class="nav__sub-title" style="font-size: 20px"> Game </span>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "data_structure" %}
-                        <li><a href="/categories/data_structure" class="" style="font-size: 18px"> DirectX ({{category[1].size}}) </a></li>
+                    {% if category[0] == "unity" %}
+                        <li><a href="/categories/unity" class="" style="font-size: 18px"> 유니티 ({{category[1].size}}) </a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "algorithm" %}
-                        <li><a href="/categories/algorithm" class="" style="font-size: 18px"> 수학 ({{category[1].size}}) </a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
-        <span class="nav__sub-title" style="font-size: 20px"> Unity </span>
-            <ul>
-                {% for category in site.categories %}
-                    {% if category[0] == "data_structure" %}
-                        <li><a href="/categories/data_structure" class="" style="font-size: 18px"> 유니티 ({{category[1].size}}) </a></li>
+                    {% if category[0] == "directX" %}
+                        <li><a href="/categories/directX" class="" style="font-size: 18px"> DirectX ({{category[1].size}}) </a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "algorithm" %}
-                        <li><a href="/categories/algorithm" class="" style="font-size: 18px"> 언리얼 ({{category[1].size}}) </a></li>
+                    {% if category[0] == "math" %}
+                        <li><a href="/categories/math" class="" style="font-size: 18px"> 수학 ({{category[1].size}}) </a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
         <span class="nav__sub-title" style="font-size: 20px"> Etc </span>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "data_structure" %}
-                        <li><a href="/categories/data_structure" class="" style="font-size: 18px"> 면접 ({{category[1].size}}) </a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
-            <ul>
-                {% for category in site.categories %}
-                    {% if category[0] == "algorithm" %}
-                        <li><a href="/categories/algorithm" class="" style="font-size: 18px"> 면접2 ({{category[1].size}}) </a></li>
+                    {% if category[0] == "interview" %}
+                        <li><a href="/categories/interview" class="" style="font-size: 18px"> 면접 ({{category[1].size}}) </a></li>
                     {% endif %}
                 {% endfor %}
             </ul>

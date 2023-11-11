@@ -3,7 +3,7 @@ main:
   - title: "Home"
     url: /index.html
   - title: "About"
-    url: /about/
+    url: /about
 
   # - title: "CPP"
   #   url: /categories/cpp

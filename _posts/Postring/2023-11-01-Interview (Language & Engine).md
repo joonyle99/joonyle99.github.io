@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "Interview - 언어 & 유니티"
+title:  "Interview - 언어 & 엔진"
 categories:
   - interview
 ---
