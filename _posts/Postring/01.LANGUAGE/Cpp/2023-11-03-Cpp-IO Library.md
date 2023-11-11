@@ -17,7 +17,7 @@ istream, ostream 클래스와 >>, << operator에 대해 알아보고 C++에서�
 
 ![](https://modoocode.com/img/2361DC4954A0CB38040ED8.webp){: .align-center}{: width="50%" height="50%"}
 
-C++의 모든 입출력 클래스는 `ios_base` 를 기반 클래스로 한다. `ios` 클래스는 <u>스트림 버퍼를 초기화 하고 현재 입출력 작업의 상태를 처리</u>한다. eof()나 good() 함수를 이용해 현재 입출력 상태를 체크할 수 있다.
+C++의 모든 입출력 클래스는 `ios_base` 를 기반 클래스로 한다. `ios` 클래스는 <u>스트림 버퍼를 초기화 하고 현재 입출력 작업의 상태를 처리</u>한다.
 
 ### istream과 operator >>
 ---
