@@ -32,6 +32,9 @@ public class ColorData : ScriptableObject
 
 ![](/assets/images/unity_scriptableObject.png){: .align-center}{: width="50%" height="50%"}
 
+스크립터블 오브젝트는 "변하지 않는 데이터"를 저장해놓는 공간이다.  
+에디터 모드에서는 스크립터블 오브젝트에도 데이터 입력을 해 저장시킬 수 있지만, 빌드 버전에서는 안되기 때문에 "데이터 지속성"이 존재하지 않는다.
+
 ### 500개의 Circle 오브젝트 생성
 ---
 
