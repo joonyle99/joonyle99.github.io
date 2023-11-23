@@ -44,7 +44,7 @@ int main()
 ### 제한 시간이 1초일 경우, N의 범위에 따른 시간 복잡도 선택
 ---
 
-![image](https://blog.kakaocdn.net/dn/nWbDr/btqYkaZqOuE/xFOyFSEYKbp2Wlz0xQ7lSk/img.png){: .align-center}
+![](https://blog.kakaocdn.net/dn/nWbDr/btqYkaZqOuE/xFOyFSEYKbp2Wlz0xQ7lSk/img.png){: .align-center}
 *N의 크기에 따른 허용 시간복잡도*
 
 * N의 범위가 500: 시간 복잡도가 O(N^3) 이하인 알고리즘을 설계
@@ -55,10 +55,23 @@ int main()
 
 ### 공간 복잡도(Space Complexity)
 ---
+
 일반적으로 메모리 사용량 기준은 'MB' 단위로 표기한다.  
 int를 기준으로 배열 크기에 따른 메모리 사용량은 다음과 같다.
+
 * int a[1000] : 4byte * 1000 = 4,000 byte = 4KB
 * int a[1000000] : 4byte * 1000000 = 4,000,000 byte = 4MB
 * int a[2000][2000] : 4byte * 2000 * 2000 = 16,000,000 byte = 16MB
 
 > 자료형 int의 크기는 4byte
+
+![](/assets/images/algorithm_stackSize.png){: .align-center}
+*Visual Studio 2022에서 Stack의 용량은 1MB이 기본 설정*
+
+프로젝트에서 int형 배열 하나만 사용한다고 가정한 경우, 요소의 최대 개수 (약 26만개)
+
+> int[262144] => 4 * 262144 = 1048576 Byte (약 100만 byte == 1 MB)
+
+* 1 MB - 1048576 Byte
+* 2 MB - 2097152 Byte
+* 4 MB - 4194304 Byte
