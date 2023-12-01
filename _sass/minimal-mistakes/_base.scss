@@ -131,10 +131,13 @@ a {
   &:focus {
     @extend %tab-focus;
   }
-
+  
+/*
+    // 방문한 링크의 색상을 변경한다.
   &:visited {
     color: $link-color-visited;
   }
+*/
 
   &:hover {
     color: $link-color-hover;
