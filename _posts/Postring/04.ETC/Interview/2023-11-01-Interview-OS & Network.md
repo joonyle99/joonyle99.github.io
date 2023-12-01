@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "Tech Interview - 운영체제 & 네트워크"
+title:  "Interview - 운영체제 & 네트워크"
 categories:
   - interview
 ---

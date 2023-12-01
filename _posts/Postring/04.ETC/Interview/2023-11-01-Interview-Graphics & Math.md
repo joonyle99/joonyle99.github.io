@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "Tech Interview - 그래픽스 & 수학"
+title:  "Interview - 그래픽스 & 수학"
 categories:
   - interview
 ---
@@ -13,7 +13,7 @@ categories:
 ### 후면 추려내기, 뒷면 처리에 대해 (뷰 프러스텀 컬링 X)
 ---
 
-### Axis Align Bounding Box(AABB)와 Oriented Bounding Box(OBB)에 대해
+### AABB (Axis Align Bounding Box)와 OBB (Oriented Bounding Box)에 대해
 ---
 
 ### Tearing 현상이 일어나는 원인과 해결법

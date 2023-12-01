@@ -94,5 +94,5 @@ _rigid.AddForceAtPosition(Vector2.right * _dir * _power, forcePointTransform.pos
 
 AddForceAtPosition()은 힘을 주는 위치를 정해줄 수 있다는 점에서 AddForce()와 차이가 있지만, 나머지는 전부 같다.
 
-ForceMode.Force를 사용하고 있으며 이는 <u> 물체의 질량, DT의 영향을 받는다 </u>.  
+ForceMode.Force를 사용하고 있으며 이는 <u> 물체의 질량, DT에 영향을 받는다 </u>.  
 그리고 이 함수는 FixedUpdate()에서 고정된 DT를 가지고 물체의 속도를 변경한다.

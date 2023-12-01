@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "Tech Interview - 언어 & 엔진"
+title:  "Interview - 언어 & 엔진"
 categories:
   - interview
 ---

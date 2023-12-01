@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "Tech Interview - 자료구조 & 알고리즘"
+title:  "Interview - 자료구조 & 알고리즘"
 categories:
   - interview
 ---
@@ -93,7 +93,6 @@ HashMap(해시 테이블)은, `Key`값을 해시 함수에 대입하여 나온 `
 
 ### 퀵소트 (Quick Sort) 알고리즘에 대해 (평균, 최악, 해결 방법)
 ---
-
 
 
 ### Stack / Queue / Heap
