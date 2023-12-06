@@ -1,33 +1,119 @@
 ---
 layout: single
-title:  "C++ - 입출력 라이브러리"
+title:  "C++ - cin와 getline()"
 categories:
   - cpp
 ---
 
 ---
 
-### 목표
+### 데이터 읽는 방식
 ---
 
-istream, ostream 클래스와 >>, << operator에 대해 알아보고 C++에서의 입출력에 대해 알아본다.
+cin : cin은 <u>공백</u>이나 <u>개행 문자('\n')</u>를 기준으로 데이터를 구분하여 읽는다.  
+getline : getline은 <u>개행 문자('\n')</u>를 기준으로 데이터를 읽어온다.
 
-### 입출력 라이브러리
+```c++
+	int age; string name;
+
+	cout << "Enter your age and name : ";
+	cin >> age >> name;
+
+	// 예시 입력: 25 John Doe
+	// age에는 25가 들어가고, name에는 "John"만 들어가게 됨
+
+	cout << "=====================================" << endl;
+
+	string fullName;
+
+	cout << "Enter your full name: ";
+	getline(std::cin, fullName);
+
+	// 예시 입력: John Doe
+	// fullName에는 "John Doe"가 들어가게 됨
+```
+
+### 개행 문자 처리
+---
+
+cin : cin은 개행 문자를 읽고, 버퍼에 남겨둔다.  
+getline : 개행 문자를 읽은 후, 제거하기 때문에 버퍼에 남지 않는다.
+
+```c++
+int num;
+char ch;
+
+cout << "Enter a number and a character: ";
+cin >> num >> ch;
+
+// 예시 입력: 42 A
+// num에는 42가 들어가고, ch에는 'A'가 들어가지만 '\n'은 버퍼에 남게 됨
+
+string sentence;
+
+cout << "Enter a sentence: ";
+getline(std::cin, sentence);
+
+// 예시 입력: Hello World
+// sentence에는 "Hello World"가 들어가게 됨
+```
+
+### cin과 getline을 함께 사용하면 생기는 문제
+---
+
+cin 다음에 getline을 사용할 때 발생하는 문제는 주로 개행 문자('\n') 때문이다.  
+cin으로 데이터를 읽을 때 사용자가 엔터 키를 누르면 개행 문자가 입력 버퍼에 남아 있게 되는데, 이 개행 문자가 getline에 영향을 주게된다.
+
+```c++
+std::string number;
+std::string name;
+
+// 엔터키를 눌러 정수 입력을 마치면 '\n'은 버퍼에 남게 됨
+std::cout << "Enter a number: ";
+std::cin >> number;
+
+// cin으로 정수를 읽은 후 남은 '\n'가 getline에 영향을 미침
+std::cout << "Enter your name: ";
+std::getline(std::cin, name);
+
+std::cout << "Number: " << number << std::endl;
+std::cout << "Name: " << name << std::endl;
+```
+
+![](/assets/images/cpp_cin_ignore1.png){: .align-center}
+
+![](/assets/images/cpp_cinNgetline.png){: .align-center}{: width="50%" height="50%"}
+
+ 이런 경우, cin.ignore() 함수를 사용하여 '\n'를 버린다.
+
+```c++
+  // 남은 개행 문자를 무시
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+```
+
+![](/assets/images/cpp_cin_ignore2.png){: .align-center}
+
+
+
+<!--
+### C++의 입출력 라이브러리
 ---
 
 ![](https://modoocode.com/img/2361DC4954A0CB38040ED8.webp){: .align-center}{: width="50%" height="50%"}
 
-C++의 모든 입출력 클래스는 `ios_base` 를 기반 클래스로 한다. `ios` 클래스는 <u>스트림 버퍼를 초기화 하고 현재 입출력 작업의 상태를 처리</u>한다.
+C++의 모든 입출력 클래스는 `ios_base` 를 기반 클래스로 한다.  
+이를 상속받는 `ios` 클래스는 <u>스트림 버퍼를 초기화 하고 현재 입출력 작업의 상태를 처리</u>한다.  
+이를 상속받는 `istream`은 <u>입력을 수행하는 입력 스트림</u>, `ostream`은 <u>입력된 내용을 출력하는 출력 스트림</u>이다.
 
-### istream과 operator >>
----
+`std::cin` 은 `istream` 클래스의 객체이며, `iostream` 클래스에 존재한다.  
+`std::cout` 은 `ostream` 클래스의 객체이며, `iostream` 클래스에 존재한다.
 
+![](/assets/images/cpp_cinNcout.png){: .align-center}
+*iostream 클래스에 존재하는 istream의 객체 cin, ostream의 객체 cout*
+-->
 
-```c++
-std::cin >> a;
-```
-
-`istream` 은 실제로 입력을 수행하는 클래스이다. `operator >>` 가 해당 클래스에 정의되어 있으며, `cin` 은 `istream` 클래스의 <u>객체</u>이다.
+<!--
+`operator >>` 가 `istream`에 내장 함수로 오버로딩되어 있다.
 
 ```c++
 istream& operator>>(bool& val);
@@ -57,24 +143,25 @@ istream& operator>>(long double& val);
 istream& operator>>(void*& val);
 ```
 
-이 처럼 operator >> 는 다양한 자료형에 대해 오버로딩 되어있어, 타입 상관없이 입력을 받을 수 있는 것이다.
+이 처럼 operator >> 는 내장 함수로 다양한 자료형에 대해 오버로딩 되어있어, 타입 상관없이 입력을 받을 수 있는 것이다.
 
-그러면 여기 있는 자료형 말고는 `operator >>` 를 사용할 수 없을까? 답은 x이다.  
+그러면 여기 있는 자료형 말고는 `>>` 를 사용할 수 없을까? 물론 할 수 있다.
 
 ```c++
 std::string s;
 std::cin >> s;
 ```
 
-`std::string` 은 cin으로 입력받을 수 있는데, 이유는 멤버 함수를 두는 것 말고도, <u>외부 함수로 연산자 오버로딩을 할 수 있기 때문이다.</u>
+`std::string` 은 cin으로 입력받을 수 있는데, 이유는 멤버 함수를 istream에 내장 함수로 두는 것 말고도, <u>외부 함수로 연산자 오버로딩을 할 수 있기 때문이다.</u>
 
 ```c++
 // istream 클래스가 아닌 외부에서 오버로딩한다.
 istream& operator >> (istream& in, std::string& s)
 {
-  // 구현한다
+  // string 입력 코드
 }
 ```
+-->
 
 <!--
 
