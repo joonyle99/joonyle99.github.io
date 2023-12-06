@@ -68,12 +68,10 @@ cin으로 데이터를 읽을 때 사용자가 엔터 키를 누르면 개행 �
 std::string number;
 std::string name;
 
-// 엔터키를 눌러 정수 입력을 마치면 '\n'은 버퍼에 남게 됨
 std::cout << "Enter a number: ";
-std::cin >> number;
+std::cin >> number;               // 엔터로 입력 종료 후, '\n'가 입력 버퍼에 남아있음
 
-// cin으로 정수를 읽은 후 남은 '\n'가 getline에 영향을 미침
-std::cout << "Enter your name: ";
+std::cout << "Enter your name: "; // 남아있는 '\n' 때문에 fullName 변수에 값을 입력받기 전에 입력 종료
 std::getline(std::cin, name);
 
 std::cout << "Number: " << number << std::endl;
@@ -82,9 +80,7 @@ std::cout << "Name: " << name << std::endl;
 
 ![](/assets/images/cpp_cin_ignore1.png){: .align-center}
 
-![](/assets/images/cpp_cinNgetline.png){: .align-center}{: width="50%" height="50%"}
-
- 이런 경우, cin.ignore() 함수를 사용하여 '\n'를 버린다.
+ 이런 경우, cin.ignore() 함수를 사용하여 '\n'를 무시한다.
 
 ```c++
   // 남은 개행 문자를 무시
@@ -92,6 +88,9 @@ std::cout << "Name: " << name << std::endl;
 ```
 
 ![](/assets/images/cpp_cin_ignore2.png){: .align-center}
+
+### 디버깅
+---
 
 
 
