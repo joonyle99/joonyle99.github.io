@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "C++ - cin와 getline()"
+title:  "C++ - cin과 getline()"
 categories:
   - cpp
 ---
@@ -71,7 +71,7 @@ std::string name;
 std::cout << "Enter a number: ";
 std::cin >> number;               // 엔터로 입력 종료 후, '\n'가 입력 버퍼에 남아있음
 
-std::cout << "Enter your name: "; // 남아있는 '\n' 때문에 fullName 변수에 값을 입력받기 전에 입력 종료
+std::cout << "Enter your name: "; // 남아있는 '\n' 때문에 변수에 값을 입력받기 전에 입력 종료
 std::getline(std::cin, name);
 
 std::cout << "Number: " << number << std::endl;
@@ -88,10 +88,6 @@ std::cout << "Name: " << name << std::endl;
 ```
 
 ![](/assets/images/cpp_cin_ignore2.png){: .align-center}
-
-### 디버깅
----
-
 
 
 <!--
