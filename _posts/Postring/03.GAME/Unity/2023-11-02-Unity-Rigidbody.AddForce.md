@@ -28,6 +28,8 @@ categories:
 4. ForceMode.VelocityChange : 입력을 직접적인 속도 변경(m/s)으로 해석하고 <u> 힘 </u>의 값에 따라 속도를 변경한다.  
    -> DT나 질량에 영향을 받지 않음
 
+> 이미 내부에서 시간에 따른 DT 계산을 해주고 있기 때문에, FixedUpdate()에서 AddForce()를 실행할 때 Time.deltaFixedTime을 해줄 필요가 없다. 
+
 <br>
 
 | Force Mode | DT (Delta Time) | 질량 |
