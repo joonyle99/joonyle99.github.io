@@ -1,7 +1,7 @@
 ---
 title: "아카이브"
 layout: archive
-permalink: categories/archive
+permalink: categories/archive/
 author_profile: true
 ---
 

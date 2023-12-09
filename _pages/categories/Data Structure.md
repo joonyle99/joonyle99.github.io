@@ -1,7 +1,7 @@
 ---
 title: "자료 구조"
 layout: archive
-permalink: categories/data_structure
+permalink: categories/data_structure/
 author_profile: true
 ---
 

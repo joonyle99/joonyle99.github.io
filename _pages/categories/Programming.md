@@ -1,7 +1,7 @@
 ---
 title: "프로그래밍"
 layout: archive
-permalink: categories/programming
+permalink: categories/programming/
 author_profile: true
 ---
 

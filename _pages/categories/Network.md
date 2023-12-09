@@ -1,7 +1,7 @@
 ---
 title: "네트워크"
 layout: archive
-permalink: categories/network
+permalink: categories/network/
 author_profile: true
 ---
 

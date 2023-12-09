@@ -1,7 +1,7 @@
 ---
 title: "면접"
 layout: archive
-permalink: categories/interview
+permalink: categories/interview/
 author_profile: true
 ---
 

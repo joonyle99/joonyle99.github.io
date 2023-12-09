@@ -1,7 +1,7 @@
 ---
 title: "다이렉트X 11"
 layout: archive
-permalink: categories/directX11
+permalink: categories/directX11/
 author_profile: true
 ---
 
