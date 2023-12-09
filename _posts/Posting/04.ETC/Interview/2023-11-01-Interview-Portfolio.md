@@ -2,10 +2,13 @@
 layout: single
 title:  "Interview - 포트폴리오 & 경험"
 categories:
-  - interview
+  - Interview
+toc: true
 ---
 
 ---
+
+{% include video id="W3eObFQhFHo" provider="youtube" %}
 
 ### 자기소개
 ---

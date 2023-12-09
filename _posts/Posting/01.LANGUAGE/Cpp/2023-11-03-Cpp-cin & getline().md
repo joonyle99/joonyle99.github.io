@@ -2,7 +2,8 @@
 layout: single
 title:  "C++ - cin과 getline()"
 categories:
-  - cpp
+  - Cpp
+toc: true
 ---
 
 ---

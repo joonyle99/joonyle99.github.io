@@ -2,7 +2,8 @@
 layout: single
 title:  "C++ - const vs constexpr"
 categories:
-  - cpp
+  - Cpp
+toc: true
 ---
 
 ---

@@ -2,7 +2,8 @@
 layout: single
 title:  "Algorithm - 깊이 우선 탐색 (DFS)"
 categories:
-  - algorithm
+  - Algorithm
+toc: true
 ---
 
 ---

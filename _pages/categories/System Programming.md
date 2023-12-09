@@ -5,5 +5,5 @@ permalink: categories/system_programming
 author_profile: true
 ---
 
-{% assign posts = site.categories.system_programming %}
+{% assign posts = site.categories.["System Programming"] %}
 {% for post in posts %} {% include archive-single2.html type=page.entries_layout %} {% endfor %}

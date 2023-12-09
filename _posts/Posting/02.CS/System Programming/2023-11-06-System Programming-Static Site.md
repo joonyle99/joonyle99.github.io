@@ -2,7 +2,8 @@
 layout: single
 title:  "System Programming - 정적 웹 페이지 (Static Web Page)"
 categories:
-  - system_programming
+  - System Programming
+toc: true
 ---
 
 ---

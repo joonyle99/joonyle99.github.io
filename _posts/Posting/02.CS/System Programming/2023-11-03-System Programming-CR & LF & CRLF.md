@@ -2,7 +2,8 @@
 layout: single
 title:  "System Programming - 줄 바꿈 방식 (CR / LF / CRLF)"
 categories:
-  - system_programming
+  - System Programming
+toc: true
 ---
 
 ---

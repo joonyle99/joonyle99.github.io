@@ -5,5 +5,5 @@ permalink: categories/math
 author_profile: true
 ---
 
-{% assign posts = site.categories.math %}
+{% assign posts = site.categories.Math %}
 {% for post in posts %} {% include archive-single2.html type=page.entries_layout %} {% endfor %}

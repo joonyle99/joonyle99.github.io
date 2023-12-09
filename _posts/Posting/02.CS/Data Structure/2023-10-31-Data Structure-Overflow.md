@@ -2,7 +2,8 @@
 layout: single
 title:  "Data Structure - 자료형과 오버플로우"
 categories:
-  - data_structure
+  - Data Structure
+toc: true
 ---
 
 ---

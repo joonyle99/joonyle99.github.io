@@ -2,7 +2,8 @@
 layout: single
 title:  "Algorithm - 시간 & 공간 복잡도"
 categories:
-  - algorithm
+  - Algorithm
+toc: true
 ---
 
 ---

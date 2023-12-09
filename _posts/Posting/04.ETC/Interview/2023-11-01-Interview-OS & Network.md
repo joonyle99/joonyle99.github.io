@@ -2,7 +2,8 @@
 layout: single
 title:  "Interview - 운영체제 & 네트워크"
 categories:
-  - interview
+  - Interview
+toc: true
 ---
 
 ---
