@@ -24,7 +24,7 @@ name                     : "Junyeol Gong" # 맨 하단 이름 찍히는 영역
 description              : "개발 공부를 기록하는 블로그" # Meta 태그에 들어가는 영역
 url                      : "https://joonyle99.github.io" # GitBlog 호스트 주소
 baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : "joonyle/joonyle99.github.io" # GitHub username/repo-name e.g. "https://github.com/joonyle99"
+repository               : "joonyle99/joonyle99.github.io" # GitHub username/repo-name e.g. "https://github.com/joonyle99"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. ""/assets/images/logo/github_unicon.png""
 masthead_title           : "joonyle99's Blog" # 홈페이지 최상단에 들어갈 타이틀
