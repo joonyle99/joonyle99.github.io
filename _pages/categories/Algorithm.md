@@ -1,9 +1,9 @@
 ---
-title: "자료 구조"
+title: "알고리즘"
 layout: archive
-permalink: /categories/data_structure
+permalink: categories/algorithm
 author_profile: true
 ---
 
-{% assign posts = site.categories.data_structure %}
+{% assign posts = site.categories.algorithm %}
 {% for post in posts %} {% include archive-single2.html type=page.entries_layout %} {% endfor %}

@@ -1,9 +1,9 @@
 ---
-title: "프로그래밍"
+title: "C++"
 layout: archive
-permalink: /categories/programming
+permalink: categories/cpp
 author_profile: true
 ---
 
-{% assign posts = site.categories.programming %}
+{% assign posts = site.categories.cpp %}
 {% for post in posts %} {% include archive-single2.html type=page.entries_layout %} {% endfor %}

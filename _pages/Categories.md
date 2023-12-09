@@ -1,7 +1,7 @@
 ---
 title: "카테고리"
 layout: archive
-permalink: /categories
+permalink: categories
 author_profile: true
 ---
 

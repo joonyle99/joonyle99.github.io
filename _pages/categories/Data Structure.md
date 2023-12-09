@@ -1,9 +1,9 @@
 ---
-title: "C#"
+title: "자료 구조"
 layout: archive
-permalink: /categories/csharp
+permalink: categories/data_structure
 author_profile: true
 ---
 
-{% assign posts = site.categories.csharp %}
+{% assign posts = site.categories.data_structure %}
 {% for post in posts %} {% include archive-single2.html type=page.entries_layout %} {% endfor %}

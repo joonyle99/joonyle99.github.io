@@ -1,9 +1,9 @@
 ---
-title: "아카이브"
+title: "네트워크"
 layout: archive
-permalink: /categories/archive
+permalink: categories/network
 author_profile: true
 ---
 
-{% assign posts = site.categories.archive %}
+{% assign posts = site.categories.network %}
 {% for post in posts %} {% include archive-single2.html type=page.entries_layout %} {% endfor %}

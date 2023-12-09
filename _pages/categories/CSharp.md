@@ -1,9 +1,9 @@
 ---
-title: "면접"
+title: "C#"
 layout: archive
-permalink: /categories/interview
+permalink: categories/csharp
 author_profile: true
 ---
 
-{% assign posts = site.categories.interview %}
+{% assign posts = site.categories.csharp %}
 {% for post in posts %} {% include archive-single2.html type=page.entries_layout %} {% endfor %}

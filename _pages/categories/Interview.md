@@ -1,9 +1,9 @@
 ---
-title: "유니티"
+title: "면접"
 layout: archive
-permalink: /categories/unity
+permalink: categories/interview
 author_profile: true
 ---
 
-{% assign posts = site.categories.unity %}
+{% assign posts = site.categories.interview %}
 {% for post in posts %} {% include archive-single2.html type=page.entries_layout %} {% endfor %}

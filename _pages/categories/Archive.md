@@ -1,9 +1,9 @@
 ---
-title: "시스템 프로그래밍"
+title: "아카이브"
 layout: archive
-permalink: /categories/system_programming
+permalink: categories/archive
 author_profile: true
 ---
 
-{% assign posts = site.categories.system_programming %}
+{% assign posts = site.categories.archive %}
 {% for post in posts %} {% include archive-single2.html type=page.entries_layout %} {% endfor %}

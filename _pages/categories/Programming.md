@@ -1,9 +1,9 @@
 ---
-title: "네트워크"
+title: "프로그래밍"
 layout: archive
-permalink: /categories/network
+permalink: categories/programming
 author_profile: true
 ---
 
-{% assign posts = site.categories.network %}
+{% assign posts = site.categories.programming %}
 {% for post in posts %} {% include archive-single2.html type=page.entries_layout %} {% endfor %}
