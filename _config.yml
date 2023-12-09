@@ -24,7 +24,7 @@ name                     : "Junyeol Gong" # 맨 하단 이름 찍히는 영역
 description              : "개발 공부를 기록하는 블로그" # Meta 태그에 들어가는 영역
 url                      : "https://joonyle99.github.io" # GitBlog 호스트 주소
 baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : "https://github.com/joonyle99" # GitHub username/repo-name e.g. "https://github.com/joonyle99"
+repository               : "joonyle/joonyle99.github.io" # GitHub username/repo-name e.g. "https://github.com/joonyle99"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. ""/assets/images/logo/github_unicon.png""
 masthead_title           : "joonyle99's Blog" # 홈페이지 최상단에 들어갈 타이틀
@@ -35,7 +35,7 @@ future                   : true # 포스팅 일자가 현재시각보다 미래�
 breadcrumbs              : true # true, false (default) # 포스트에서 파일 경로 표시하는 변수
 words_per_minute         : # 200 # 해당 포스트 읽는데 걸리는 시간을 계산하기 위해 대락 분당 읽는 수가 몇글자가 될지 적는 공간.
 comments:
-  provider               : "facebook" # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
+  provider               : "utterances" # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
   disqus:
     shortname            : # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
@@ -43,11 +43,11 @@ comments:
   facebook:
     # https://developers.facebook.com/docs/plugins/comments
     appid                : # optional
-    num_posts            : 5 # 5 (default)
-    colorscheme          : "dark" # "light" (default), "dark"
+    num_posts            : # 5 (default)
+    colorscheme          : # "light" (default), "dark"
   utterances:
-    theme                : # "github-light" (default), "github-dark"
-    issue_term           : # "pathname" (default)
+    theme                : "photon-dark" # "github-light" (default), "github-dark"
+    issue_term           : "pathname" # "pathname" (default)
   giscus:
     repo_id              : # Shown during giscus setup at https://giscus.app
     category_name        : # Full text name of the category
@@ -306,6 +306,7 @@ defaults:
       use_math: true # 기본적으로 use_math 사용
       mathjax: true # 웹 브라우저에 수학 표기법을 표시하는 라이브러리 mathjax 사용
       sidebar_main: true
+      toc: true
 
   # _pages
   - scope:
