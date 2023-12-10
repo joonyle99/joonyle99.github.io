@@ -55,8 +55,8 @@
             </ul>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "System Programming" %}
-                        <li><a href="/categories/system_programming" class="" style="font-size: 18px"> 시스템 프로그래밍 ({{category[1].size}}) </a></li>
+                    {% if category[0] == "Programming" %}
+                        <li><a href="/categories/programming" class="" style="font-size: 18px"> 프로그래밍 ({{category[1].size}}) </a></li>
                     {% endif %}
                 {% endfor %}
             </ul>

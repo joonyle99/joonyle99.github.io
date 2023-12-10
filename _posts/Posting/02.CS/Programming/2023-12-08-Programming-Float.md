@@ -1,8 +1,8 @@
 ---
 layout: single
-title:  "C++ - 1.1 + 0.1 == 1.2"
+title:  "Programming - 1.1 + 0.1 == 1.2"
 categories:
-  - Cpp
+  - Programming
 toc: true
 ---
 

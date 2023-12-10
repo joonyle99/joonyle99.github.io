@@ -1,8 +1,8 @@
 ---
 layout: single
-title:  "System Programming - 메모리 레이아웃"
+title:  "Programming - 메모리 레이아웃"
 categories:
-  - System Programming
+  - Programming
 toc: true
 ---
 
