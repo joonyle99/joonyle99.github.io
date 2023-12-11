@@ -3,7 +3,6 @@ layout: single
 title:  "Programming - 메모리 레이아웃"
 categories:
   - Programming
-toc: true
 ---
 
 ---

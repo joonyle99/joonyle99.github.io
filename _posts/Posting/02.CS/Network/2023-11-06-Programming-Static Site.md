@@ -1,9 +1,8 @@
 ---
 layout: single
-title:  "Programming - 정적 웹 페이지 (Static Web Page)"
+title:  "Network - 정적 웹 페이지 (Static Web Page)"
 categories:
-  - Programming
-toc: true
+  - Network
 ---
 
 ---

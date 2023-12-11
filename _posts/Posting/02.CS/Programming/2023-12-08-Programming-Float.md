@@ -3,7 +3,6 @@ layout: single
 title:  "Programming - 1.1 + 0.1 == 1.2"
 categories:
   - Programming
-toc: true
 ---
 
 ---

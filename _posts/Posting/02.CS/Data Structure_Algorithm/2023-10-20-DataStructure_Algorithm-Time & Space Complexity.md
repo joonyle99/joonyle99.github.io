@@ -1,9 +1,8 @@
 ---
 layout: single
-title:  "Algorithm - 시간 & 공간 복잡도"
+title:  "Data Structure / Algorithm - 시간 & 공간 복잡도"
 categories:
-  - Algorithm
-toc: true
+  - DataStructure_Algorithm
 ---
 
 ---

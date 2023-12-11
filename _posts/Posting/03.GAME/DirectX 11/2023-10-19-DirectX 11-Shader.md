@@ -3,7 +3,6 @@ layout: single
 title:  "DirectX 11 - 셰이더"
 categories:
   - DirectX 11
-toc: true
 ---
 
 ---

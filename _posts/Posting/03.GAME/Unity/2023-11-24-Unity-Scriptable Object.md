@@ -3,7 +3,6 @@ layout: single
 title:  "Unity - Scriptable Object"
 categories:
   - Unity
-toc: true
 ---
 
 ---

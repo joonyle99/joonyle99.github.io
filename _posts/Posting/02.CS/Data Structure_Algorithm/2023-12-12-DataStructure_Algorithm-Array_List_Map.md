@@ -1,53 +1,10 @@
 ---
 layout: single
-title:  "Interview - 자료구조 & 알고리즘"
+title:  "Data Structure / Algorithm - Array / List / Map"
 categories:
-  - Interview
-toc: true
+  - DataStructure_Algorithm
 ---
 
----
-
-### 시퀀스 컨테이너 vs 연관 컨테이너
----
-
-시퀀스 컨테이너 : vector<>, list<>, deque<>, ... 과 같이 데이터를 순서 있게 보관하는 컨테이너 (Index가 있다).  
-연관 컨테이너 : map<>, set<>, hash_map<>, hash_set<> ... 과 같이 `Key`와 `Value`로 데이터를 보관하는 컨테이너.
-
-> hash_map<>과 hash_set<>은 unordered_map<>과 unordered_set<>으로 이름이 변경되었다.
-
-<!--
-> 연관 컨테이너는 `Key`값의 중복을 허용하지 않는데, 만약 중복되는 `Key`값을 사용하고 싶다면 multi-를 붙여 사용한다.
-> e.g ) multi_map<>, multi_set<>
--->
-
-<!--
-> 연관 컨테이너 중 map<>과 set<>은 `Key`를 기준으로 정렬된 상태로 데이터를 보관하고, 그 순서대로 순회한다. 반면에 hash_map<>, hash_set<> 의 Hash STL은 정렬이 필요 없으며 Random Access 방식으로 빠른 데이터 검색이 가능하다 (시간 복잡도 O(1))
--->
-
-### HashMap 중복 시 해결 방법 (체이닝 이외의 방법 제시)
----
-
-![](../assets/images/data_hashFunc.png){: width="55%" height="55%"}
-
-HashMap(해시 테이블)은, `Key`값을 해시 함수에 대입하여 나온 `Bucket Number`에 그 값을 저장하는 자료구조이다.
-
-
-![](/assets/images/data_hashComplict.png){: width="55%" height="55%"}
-
-이런 HashMap에는 문제점이 하나 있는데, 고유한 `Key`에 여러 `Value`가 저장될 수 있다는 점이다. 즉, 다른 `Key`를 가진 `Value`가 같은 `Buckkey Number`에 저장된다는 것이다.
-
-이러한 문제를 해결하기 위한 방법인 Chaining과 Open Address에 대해 알아보자
-
-1. Chaining
-
-
-
-2. OpenAddress
-
-
-
-### Dictionary의 내부 구조와 시간 복잡도에 대해
 ---
 
 ### Array / List / Map에 관해 설명 및 차이점
@@ -79,7 +36,7 @@ HashMap(해시 테이블)은, `Key`값을 해시 함수에 대입하여 나온 `
 
 -> 요소에 대한 임의 엑세스 (Random Access)는 거의 발생하지 않으며, 요소 삽입 / 삭제를 앞, 뒤, 중간 등 빈번하게 사용해야 하는 경우에 사용한다.
 
-### Map
+#### Map
 : 각 요소가 데이터의 `Key`와 `Value`의 쌍으로 이루어져 데이터를 효율적으로 관리하고 검색할 수 있다. `Key`는 단 하나만 존재하며 고유하고, `Key`를 가지고 데이터를 자동으로 정렬해 준다.
 
 * [map<> STL - MSDN](https://learn.microsoft.com/ko-kr/cpp/standard-library/map-class?view=msvc-170)
@@ -91,16 +48,3 @@ HashMap(해시 테이블)은, `Key`값을 해시 함수에 대입하여 나온 `
 
 > Map의 `Key`값은 중복될 수 없는데, "중복을 허용하려면" multimap<>을 사용해야 한다.  
 > 또한 Map은 `Key`에 "따라 자동정렬이 되는데, "자동정렬을 원치 않는다면" unorderedmap<>을 사용해야 한다
-
-### 퀵소트 (Quick Sort) 알고리즘에 대해 (평균, 최악, 해결 방법)
----
-
-
-### Stack / Queue / Heap
----
-
-### 앞뒤가 같은 수들의 나열이 있을 때, N 번째 수를 계산 (11, 22, 33, 44, 55 ...)
----
-
-### 시간 복잡도(Time Complexity)에 대해
----

@@ -1,9 +1,8 @@
 ---
 layout: single
-title:  "Algorithm - 깊이 우선 탐색 (DFS)"
+title:  "Data Structure / Algorithm - 깊이 우선 탐색 (DFS)"
 categories:
-  - Algorithm
-toc: true
+  - DataStructure_Algorithm
 ---
 
 ---

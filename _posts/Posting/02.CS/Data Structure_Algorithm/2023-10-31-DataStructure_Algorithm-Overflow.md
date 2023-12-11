@@ -1,9 +1,8 @@
 ---
 layout: single
-title:  "Data Structure - 자료형과 오버플로우"
+title:  "Data Structure / Algorithm - 자료형과 오버플로우"
 categories:
-  - Data Structure
-toc: true
+  - DataStructure_Algorithm
 ---
 
 ---

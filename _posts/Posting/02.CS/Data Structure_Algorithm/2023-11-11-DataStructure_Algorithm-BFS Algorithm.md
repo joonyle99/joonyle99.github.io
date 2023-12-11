@@ -1,9 +1,8 @@
 ---
 layout: single
-title:  "Algorithm - 너비 우선 탐색 (BFS)"
+title:  "Data Structure / Algorithm - 너비 우선 탐색 (BFS)"
 categories:
-  - Algorithm
-toc: true
+  - DataStructure_Algorithm
 ---
 
 ---

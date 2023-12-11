@@ -1,8 +1,8 @@
 ---
 layout: single
-title:  "Algorithm - 스택 (Stack)"
+title:  "Data Structure / Algorithm - 스택 (Stack)"
 categories:
-  - Algorithm
+  - DataStructure_Algorithm
 ---
 
 ---

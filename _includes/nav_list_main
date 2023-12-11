@@ -34,15 +34,8 @@
         <span class="nav__sub-title" style="font-size: 20px"> CS </span>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "Data Structure" %}
-                        <li><a href="/categories/data_structure" class="" style="font-size: 18px"> 자료구조 ({{category[1].size}}) </a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
-            <ul>
-                {% for category in site.categories %}
-                    {% if category[0] == "Algorithm" %}
-                        <li><a href="/categories/algorithm" class="" style="font-size: 18px"> 알고리즘 ({{category[1].size}}) </a></li>
+                    {% if category[0] == "DataStructure_Algorithm" %}
+                        <li><a href="/categories/dataStructure_algorithm" class="" style="font-size: 18px"> 자료구조 / 알고리즘 ({{category[1].size}}) </a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
