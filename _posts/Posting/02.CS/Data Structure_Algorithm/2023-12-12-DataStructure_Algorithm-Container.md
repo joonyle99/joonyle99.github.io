@@ -10,7 +10,7 @@ categories:
 ### 시퀀스 컨테이너 vs 연관 컨테이너
 ---
 
-시퀀스 컨테이너 : vector<>, list<>, deque<>, ... 과 같이 데이터를 순서 있게 보관하는 컨테이너 (Index가 있다).  
+시퀀스 컨테이너 : vector<>, list<>, deque<>, ... 과 같이 데이터를 순서 있게 보관하는 컨테이너로 `Index`가 있다.  
 연관 컨테이너 : map<>, set<>, hash_map<>, hash_set<> ... 과 같이 `Key`와 `Value`로 데이터를 보관하는 컨테이너.
 
 > hash_map<>과 hash_set<>은 unordered_map<>과 unordered_set<>으로 이름이 변경되었다.

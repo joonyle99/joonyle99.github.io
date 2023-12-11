@@ -230,7 +230,7 @@ sass:
 
 # Outputting
 permalink: /:categories/:title/
-paginate: 5 # default : 5
+paginate: 10 # default : 5 # 최근 포스트 노출 개수
 paginate_path: /page:num/
 timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
