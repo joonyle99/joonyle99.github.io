@@ -49,8 +49,9 @@ categories:
 -->
 
 [백준 23300번 - 웹 브라우저](https://www.acmicpc.net/problem/23300)
-
 > 이 문제에서 압축 기능에 대해서는 설명하지 않는다.
+
+#### 초기 세팅
 
 ```c++
 	std::stack<int> backSpace; // 뒤로 이동할 페이지를 쌓아두는 곳
@@ -62,6 +63,8 @@ categories:
 
 2개의 스택을 사용한다. backSpace와 frontSpace.  
 앞으로 이 공간에 뒤로 이동할 페이지와 앞으로 이동할 페이지를 쌓는다.
+
+#### 페이지 이동
 
 ```c++
 if (task == 'A')    // A : 페이지 이동
@@ -87,8 +90,13 @@ if (task == 'A')    // A : 페이지 이동
 }
 ```
 
+![](/assets/images/algorithm_web3.png){: .align-center}
+*왼쪽이 backSpace, 오른쪽이 frontSpace, 가운데가 curPageNumber*
+
 페이지 이동은 사용자가 이동할 페이지를 입력하면 curPageNumber에 그 값을 저장한다.  
 이후 accessCount가 0이 아니라면 backSpace에 curPageNumber를 Push한다.
+
+#### 페이지 뒤로 가기
 
 ```c++
 else if (task == 'B')   // B : 페이지 뒤로 가기
@@ -108,8 +116,13 @@ else if (task == 'B')   // B : 페이지 뒤로 가기
 }
 ```
 
-페이지 뒤로 가기는 backSpace의 가장 최근 페이지(가장 위에 있는)를 curPageNumber로 만드는 것이다.  
+![](/assets/images/algorithm_web5.png){: .align-center}
+*왼쪽이 backSpace, 오른쪽이 frontSpace, 가운데가 curPageNumber*
+
+frontSpace에 curPageNumber를 넣고, backSpace의 가장 최근 페이지를 curPageNumber로 만든다.  
 이후 backSpace의 최상위 페이지를 Pop한다.
+
+#### 페이지 앞으로 가기
 
 ```c++
 else if (task == 'F')   // F : 페이지 앞으로 가기
@@ -129,7 +142,9 @@ else if (task == 'F')   // F : 페이지 앞으로 가기
 }
 ```
 
-페이지 앞으로 가기는 frontSpace의 가장 최근 페이지를 curPageNumber로 만드는 것이다.  
+('페이지 뒤로 가기' 작업과 동일)
+
+backSpace의 curPageNumber를 넣고, frontSpace의 가장 최근 페이지를 curPageNumber로 만든다.  
 이후 frontSpace의 최상위 페이지를 Pop한다.
 
 ### 스택의 활용 - 단어 뒤집기
