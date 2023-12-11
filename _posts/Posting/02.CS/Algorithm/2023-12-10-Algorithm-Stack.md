@@ -146,11 +146,3 @@ else if (task == 'F')   // F : 페이지 앞으로 가기
 
 backSpace의 curPageNumber를 넣고, frontSpace의 가장 최근 페이지를 curPageNumber로 만든다.  
 이후 frontSpace의 최상위 페이지를 Pop한다.
-
-### 스택의 활용 - 단어 뒤집기
----
-
-![](/assets/images/algorithm_l_love_you.png){: .align-center}
-
-[백준 17413번 - 단어 뒤집기 문제](https://www.acmicpc.net/problem/17413)
-
