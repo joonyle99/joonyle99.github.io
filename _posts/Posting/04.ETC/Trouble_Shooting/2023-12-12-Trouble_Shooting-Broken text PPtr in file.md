@@ -50,12 +50,12 @@ YAML(YAML Ain't Markup Language)은 XML이나 Json과 같이 나중에 재구성
 
 [YAML 유니티 공식 문서](https://blog.unity.com/kr/engine-platform/understanding-unitys-serialization-language-yaml)
 
-> YAML 파일의 각 오브젝트에는 'File ID'라는 ID가 있습니다. 이 ID는 파일 내 각 오브젝트에 대해 고유하며 <u>상호 간의 레퍼런스를 해결하는 역할</u>을 합니다.
+> "YAML 파일의 각 오브젝트에는 'File ID'라는 ID가 있습니다. 이 ID는 파일 내 각 오브젝트에 대해 고유하며 <u>상호 간의 레퍼런스를 해결하는 역할</u>을 합니다."
 
 ![](/assets/images/trouble_shooting_PPtr7.jpg){: .align-center}
 *특정 게임 오브젝트와 연결된 트랜스폼*
 
-> 이에 대한 YAML 포맷은 프로퍼티 값으로서 '{fileID: FILE ID}'입니다. 'm_GameObject' 프로퍼티가 파일 ID를 통해 해당 항목을 참조한다는 것을 감안하여, 이 트랜스폼이 어떻게 ID 4112328598445621100인 게임 오브젝트에 속하는지 확인할 수 있습니다.
+> "이에 대한 YAML 포맷은 프로퍼티 값으로서 '{fileID: FILE ID}'입니다. 'm_GameObject' 프로퍼티가 파일 ID를 통해 해당 항목을 참조한다는 것을 감안하여, 이 트랜스폼이 어떻게 ID 4112328598445621100인 게임 오브젝트에 속하는지 확인할 수 있습니다."
 
 ### 해결 방법
 ---
@@ -75,8 +75,8 @@ YAML 언어로 작성된 파일이라는 것, Animator State Transition에 대�
 존재하지 않는다고 했던 식별자를 파일에서 찾을 수 있었다.  
 그리고 이 식별자에 해당하는 State Transition을 Animator에서 찾아보았는데 찾을 수 없었다. (다른 값들은 Unity Animator에서 찾을 수 있었다.)
 
-팀원의 작업 내용이 Merge 되는 과정에서 문제가 발생해 존재하지 않는 객체를 참조하면서 발생한 것이었다.  
-이후, 해당 식별자가 존재하는 객체 제거해 문제를 해결했다.
+팀원의 작업 내용이 Merge 되는 과정에서 문제가 발생해, 존재하지 않는 객체를 참조하면서 발생한 것이었다.  
+이후, 해당 식별자를 참조하는 객체를 제거해 문제를 해결했다.
 
 ### 후기
 ---
