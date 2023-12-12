@@ -46,7 +46,7 @@ Animator 파일을 뜯어서 확인해 보기로 한다.
 ---
 
 Unity에서는 YAML이라는 직렬화 언어를 이용한 모든 Asset을 수정할 수 있다.
-YAML(Yet Another Markup Language)은 XML이나 Json과 같이 나중에 재구성할 수 있는 포맷으로 변환한다.
+YAML(YAML Ain't Markup Language)은 XML이나 Json과 같이 나중에 재구성할 수 있는 포맷으로 변환한다.
 
 [YAML 유니티 공식 문서](https://blog.unity.com/kr/engine-platform/understanding-unitys-serialization-language-yaml)
 
