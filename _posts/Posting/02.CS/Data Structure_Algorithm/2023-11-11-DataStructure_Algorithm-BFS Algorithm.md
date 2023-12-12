@@ -30,6 +30,7 @@ categories:
 
 [BFS / DFS 알고리즘 문제 리스트](https://www.acmicpc.net/workbook/view/17403)
 
+<!--
 ### BFS 코드 스니펫
 ---
 
@@ -123,3 +124,4 @@ int BFS(int startY, int startX)
 	return innerCount;
 }
 ```
+-->
