@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "Data Structure / Algorithm - DFS와 BFS에 대해 더 알아보기"
+title:  "Data Structure / Algorithm - DFS와 BFS 문제 풀이"
 categories:
   - DataStructure_Algorithm
 ---
@@ -33,11 +33,12 @@ categories:
 ![](https://blog.kakaocdn.net/dn/An8Dn/btqIqmfKxBX/KwJNGT1yfPIYsdhAuAerP0/img.jpg)
 *인접 행렬과 인접 리스트*
 
-'인접 행렬'은 N x M의 2차원 배열로 서로의 연결 정보를 표현하는 방식이다.  
-반면 '인접 리스트'는 인접한 노드에 대한 연결 정보만 표현하는 방식이다.
+'인접 행렬'은 모든 노드 간의 연결 관계를 2차원 배열로 표현하는 방식이다.  
+반면 '인접 리스트'는 연결된 노드들만을 리스트로 표현하는 방식이다.
 
 인접 행렬은 <u>인접하지 않은 노드에 대한 정보</u>도 가지고 있으므로 메모리 낭비가 크고,
 인접리스트는 <u>인접한 노드에 대한 정보</u>에 대한 정보만 가지고 있으므로 불필요한 메모리 낭비를 방지한다.
+특히 희소 그래프(대부분의 노드 간 연결이 없는 그래프)의 경우, 인접 리스트가 메모리 낭비를 줄일 수 있다.
 
 이 문제 풀이에서 메모리 사용에 있어 더 효율적인 인접 리스트를 사용할 예정이다.  
 정확히는 '인접 리스트 방식'을 사용할 것이다.
@@ -172,25 +173,20 @@ void BFS(int rootNode)
 많은 경우에서 위와 같이 DFS와 BFS 중 어떤 것을 쓰더라도 크게 상관이 없는데,  
 모든 노드를 방문해야만 하거나 탐색 방식이 중요하지 않은 경우가 있다.
 
-위의 문제에서도 DFS와 BFS 모두 같은 성능을 보여준다는 것이다.
+위의 문제에서도 DFS와 BFS가 같은 속도를 보여준다는 것이다.
 
 ![](/assets/images/dataAlgorithm_dfs_bfs_diff.png){: .align-center}
-*DFS와 BFS의 속도가 같은 경우*
+*DFS와 BFS 방식 모두 같은 시간이 소요*
 
 ### DFS와 BFS를 구분해야 하는 경우
 ---
-
-하지만 분명 DFS가 압도적으로 편하거나 BFS가 편한 경우가 있다.
-코딩 테스트처럼 '시간 제한', '메모리 제한'이 있는 경우, DFS와 BFS를 잘 골라서 풀어야 조건에 맞출 수 있다.
 
 #### DFS
 
 ![](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FGlmWb%2FbtrnCPbhk8J%2Fin0bgtZGaCQyZI2l7RJYk0%2Fimg.png){: .align-center}{: width="70%" height="70%"}
 *DFS의 동작 순서 2*
 
-DFS는 한 루트를 우직하게 파고들며, <u>재귀적 특성</u>과 <u>백 트래킹</u>을 해야 하는 경우 많이 활용된다.  
-또한 모든 경로를 하나하나 모두 탐색하는 '완전 탐색'의 상황을 선호한다.
-
+DFS는 한 루트를 우직하게 파고들며, <u>재귀적 특성</u>과 <u>백 트래킹</u>을 해야 하는 경우 많이 활용된다.
 
 #### BFS
 
