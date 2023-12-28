@@ -253,7 +253,7 @@ YAML 파일의 각 오브젝트에는 'File ID'라는 ID가 있다.
 
 해석하면, "해당 Transition에서 참조하는 목적지 State가 존재하지 않는다"이다.
 
-팀원의 작업 내용이 Merge 되는 과정에서 모종의 이유로 인해,  
+팀원과 같은 Player Animator 파일을 작업했는데, 그 과정에서  
 Player Animator에 할당된 Animation을 삭제했는데, Player Animator YAML파일에는 삭제한 Animation을 참조하는 부분이 남아있고, Animation 파일만 삭제되어 발생한 문제인 것 같다.
 
 이후, 존재하지 않는 객체를 제거해 문제를 해결했다.
