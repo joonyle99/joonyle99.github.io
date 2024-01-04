@@ -8,6 +8,7 @@ categories:
 ---
 
 ### DFS의 동작 원리
+
 ---
 
 [이전 포스팅 내용 - DFS의 동작 순서](https://joonyle99.github.io/datastructure_algorithm/DataStructure_Algorithm-DFS-BFS/#dfs)
@@ -19,6 +20,7 @@ DFS는 함수의 재귀적 특성(호출 스택)을 사용한다.
 *함수의 호출 스택 처리 과정*
 
 ### 백준 15649번 - N과 M (1)
+
 ---
 
 [문제 링크](https://www.acmicpc.net/problem/15649)
@@ -35,6 +37,7 @@ N이 3, M이 3인 경우
 *예제에 대한 정답*
 
 ### DFS를 이용해야 하는 이유
+
 ---
 
 이 문제의 경우 BFS가 아닌 DFS를 이용해야 한다.
@@ -55,6 +58,7 @@ N이 3, M이 3인 경우
 함수와 매개변수를 적극 사용하며 재귀함수의 특성을 이용하는 것이 포인트이다.
 
 ### 풀이 방법
+
 ---
 
 ```c++
@@ -70,20 +74,20 @@ cin >> N >> M;
 // 1 ~ N의 수를 담기 위한 inputArray
 inputArray.resize(N + 1);
 for (int i = 1; i <= N; ++i)
-	inputArray[i] = i;
+ inputArray[i] = i;
 
 // 1 ~ N 까지 돌면서 수열의 시작값을 설정
 for (int i = 1; i <= N; ++i)
 {
-	// 방문 처리를 위한 vector<>
-	std::vector<bool> visited(N + 1);
+ // 방문 처리를 위한 vector<>
+ std::vector<bool> visited(N + 1);
 
-	// 수열을 담기위한 vector<>
-	std::vector<int> numVector;
+ // 수열을 담기위한 vector<>
+ std::vector<int> numVector;
 
-	// DFS를 이용한 백 트래킹
-	// visited와 numVector는 함수의 인자로 전달하며 계속해서 최신화된 정보를 가지고 있어야 한다.
-	DFS(i, visited, numVector);
+ // DFS를 이용한 백 트래킹
+ // visited와 numVector는 함수의 인자로 전달하며 계속해서 최신화된 정보를 가지고 있어야 한다.
+ DFS(i, visited, numVector);
 }
 ```
 
@@ -91,37 +95,36 @@ for (int i = 1; i <= N; ++i)
 // DFS를 이용한 백 트래킹
 void DFS(int number, std::vector<bool> visited, std::vector<int> numVector)
 {
-	// 들어온 수에 대한 '방문처리' 및 '수열에 등록'
-	visited[number] = true;
-	numVector.push_back(number);
+ // 들어온 수에 대한 '방문처리' 및 '수열에 등록'
+ visited[number] = true;
+ numVector.push_back(number);
 
-	// 목표하는 수열의 길이
-	const auto arrayCount = numVector.size();
+ // 목표하는 수열의 길이
+ const auto arrayCount = numVector.size();
 
-	// 길이 M의 수열 생성 완료
-	if (arrayCount == M)
-	{
-		// 수열 출력
-		for (int i = 0; i < arrayCount; ++i)
-		{
-			if (i == arrayCount - 1)
-				cout << numVector[i] << '\n';
-			else
-				cout << numVector[i] << " ";
-		}
+ // 길이 M의 수열 생성 완료
+ if (arrayCount == M)
+ {
+  // 수열 출력
+  for (int i = 0; i < arrayCount; ++i)
+  {
+   if (i == arrayCount - 1)
+    cout << numVector[i] << '\n';
+   else
+    cout << numVector[i] << " ";
+  }
 
- 		// 함수 종료
-		return;
-	}
+   // 함수 종료
+  return;
+ }
 
-	// 1 ~ N 까지 완전 탐색
-	for (int i = 1; i <= N; ++i)
-	{
-		// 다음 수열 등록을 위한 Recursive
-		// 방문 정보를 확인한다 (중복 방지)
-		if (!visited[i])
-			DFS(i, visited, numVector);
-	}
+ // 1 ~ N 까지 완전 탐색
+ for (int i = 1; i <= N; ++i)
+ {
+  // 다음 수열 등록을 위한 Recursive
+  // 방문 정보를 확인한다 (중복 방지)
+  if (!visited[i])
+   DFS(i, visited, numVector);
+ }
 }
 ```
-
