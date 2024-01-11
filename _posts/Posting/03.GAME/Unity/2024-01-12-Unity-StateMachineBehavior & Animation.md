@@ -144,8 +144,11 @@ Idle 애니메이션이 끝나고 난 이후에도 0.15초 동안 Hide 애니메
     }
 ```
 
-각각의 State가 아닌 Monobehavior의 Update()에서 `CurrentStateIs<>()`로 현재 상태 체크 후 `SetTrigger()` 해준다.
+각각의 State가 아닌 Monobehavior의 Update()에서 현재 상태 체크 후 `SetTrigger()` 해준다.
 
 ![](/assets/images/unity_anim10.gif){: .align-center}
 
 이제 자연스럽게 잘 동작하는 것을 볼 수 있다.
+
+플레이어 FSM에 이어 몬스터 FSM을 설계하는데 몬스터 FSM은 다양한 종류의 몬스터를 고려해야 해서 더 복잡한 것 같다.
+각 <u>State에서의 스크립트</u>와 <u>MonoBehavior의 스크립트(게임 오브젝트의 컴포넌트에서 실행되는 스크립트)</u>를 적절히 잘 사용하도록 노력하자.
