@@ -86,16 +86,16 @@ Idle 애니메이션이 끝나고 난 이후에도 0.15초 동안 Hide 애니메
 
 ![](/assets/images/unity_anim7.png){: .align-center}
 
-이 현상의 로그를 찍어 확인해 보면  
+이 현상에 대해 로그를 찍어 확인해 보면
 
 1. `Enter Idle` - Idle 애니메이션 시작
 2. `Hide SetTrigger` - Hide 애니메이션으로 전이
 3. `Enter Hide` - Hide 애니메이션 시작
-4. `Hide SetTrigger`와 `Hide의 Update ~~~~~~~` - Idle과 Hide 애니메이션이 동시에 실행
+4. `Hide SetTrigger`와 `Hide의 Update ~~~~~~~~` - Idle과 Hide 애니메이션이 동시에 실행
 5. `Exit Idle` - Idle 애니메이션 종료 (0.15초 경과)
 
-이렇게 Idle 애니메이션, Hide 애니메이션이 동시에 실행되면서  
-애니메이션에 종속적인 `StateMachineBehaviour(Idle State와 Hide State 스크립트)`가 Idle, Hide에서 둘 다 실행되면서 발생한 문제였다.
+이렇게 Idle 애니메이션, Hide 애니메이션이 동시에 실행되는 상황이었고,  
+애니메이션에 종속적인 `StateMachineBehaviour` 스크립트가 Idle, Hide에서 둘 다 실행되며 발생한 문제였다.
 
 ![](/assets/images/unity_anim8.png){: .align-center}
 
@@ -150,5 +150,5 @@ Idle 애니메이션이 끝나고 난 이후에도 0.15초 동안 Hide 애니메
 
 이제 자연스럽게 잘 동작하는 것을 볼 수 있다.
 
-플레이어 FSM에 이어 몬스터 FSM을 설계하는데 몬스터 FSM은 다양한 종류의 몬스터를 고려해야 해서 더 복잡한 것 같다.
+플레이어 FSM에 이어 몬스터 FSM을 설계하는데 몬스터 FSM은 다양한 종류의 몬스터를 고려해야 해서 더 복잡한 것 같다.  
 각 <u>State에서의 스크립트</u>와 <u>MonoBehavior의 스크립트(게임 오브젝트의 컴포넌트에서 실행되는 스크립트)</u>를 적절히 잘 사용하도록 노력하자.
