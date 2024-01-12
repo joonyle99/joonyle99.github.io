@@ -15,12 +15,15 @@ categories:
 
 ![](/assets/images/unity_anim_%20(2).gif){: .align-center}
 
-영역 밖으로 나가면 나오고, 들어오면 숨는 그런 기능을 만드려고 했는데  
+영역 밖으로 나가면 나오고, 들어오면 숨는 그런 기능을 만들려고 했는데  
 애니메이션이 부자연스럽게 전이가 된다.  
 (원래는 슝~ 하고 들어갔다 나왔다가 해야 함)
 
 왜 그런지 이유를 찾다 보니  
-애니메이션 전이를 위해 해주고 있던 파라미터의 SetTrigger()가 한 번이 아닌 여러 번 호출되고 있었다.
+애니메이션 전이를 위해 해주고 있던 파라미터의 `SetTrigger()`가 한 번이 아닌 여러 번 호출되고 있었다.
+
+`SetTrigger()`가 여러 번 호출되면서 Idle -> Hide로 이미 상태가 전이됐음에도  
+Hide -> Hide로 또다시 애니메이션 전이를 발생시키고 있는 것이었다.
 
 ![](/assets/images/unity_anim6.png){: .align-center}
 
@@ -95,7 +98,11 @@ Idle 애니메이션이 끝나고 난 이후에도 0.15초 동안 Hide 애니메
 5. `Exit Idle` - Idle 애니메이션 종료 (0.15초 경과)
 
 이렇게 Idle 애니메이션, Hide 애니메이션이 동시에 실행되는 상황이었고,  
-애니메이션에 종속적인 `StateMachineBehaviour` 스크립트가 Idle, Hide에서 둘 다 실행되며 발생한 문제였다.
+애니메이션에 종속적인 `StateMachineBehaviour`가 두 상태에서 실행되며 발생한 문제였다.
+
+즉 Idle State의 OnStateUpdate()와 Hide State의 OnStateUpdate()가 동시에 호출되고 있는 것이다.  
+객체가 FSM에서 한 상태만을 가지고 있을거라고 예상한 것과 달리  
+Animation의 Transition Duration을 이용하면 <u>두 상태를 동시에 가지고</u> 있을 수 있었다.
 
 ![](/assets/images/unity_anim8.png){: .align-center}
 
