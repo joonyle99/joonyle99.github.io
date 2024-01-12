@@ -174,10 +174,9 @@ StateMachineBehaviour와 MonoBehavior를 함께 사용하는 방식이 단순한
 
 몬스터는 StateMachineBehavior를 상속받아 FSM을 설계했지만,  
 플레이어는 순수 C# 스크립트로 SMB를 상속받지 않고 사용했는데,  
-이 방식으로 다시 재작 업해야 한다는 생각이 들었다.
+이 방식으로 다시 재작업해야 한다는 생각이 들었다.
 
-즉 StateMachineBehaviour를 직접 제작하면서 수동으로 Animation 전환에 따른 ChangeState를 해줘야 한다는 것이다.
+즉 StateMachineBehaviour를 직접 제작하면서 수동으로 Animation 전환에 따른 ChangeState를 해줘야 한다는 것이며,  
+나는 이제 `StateMachineBase와` `StateBase` 이 두 클래스를 기반으로 FSM 설계를 다시 하러 간다.
 
-[나와 비슷한 고민을 하는 `olejuer`](https://forum.unity.com/threads/state-machine-behaviour-best-practices.848410/)
-
-`StateMachineBase와` `StateBase` 이 두 클래스를 기반으로 FSM 설계를 다시 하러 간다.
+[나와 비슷한 고민을 하는 `olejuer`씨](https://forum.unity.com/threads/state-machine-behaviour-best-practices.848410/)
