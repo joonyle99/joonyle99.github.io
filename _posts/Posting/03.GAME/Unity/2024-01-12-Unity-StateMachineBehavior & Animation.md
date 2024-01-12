@@ -19,6 +19,9 @@ categories:
 애니메이션이 부자연스럽게 전이가 된다.  
 (원래는 슝~ 하고 들어갔다 나왔다가 해야 함)
 
+![](/assets/images/unity_anim11.png){: .align-center}
+*몬스터의 AnimatorController FSM*
+
 왜 그런지 이유를 찾다 보니  
 애니메이션 전이를 위해 해주고 있던 파라미터의 `SetTrigger()`가 한 번이 아닌 여러 번 호출되고 있었다.
 
@@ -31,7 +34,7 @@ Hide -> Hide로 또다시 애니메이션 전이를 발생시키고 있는 것�
 
 ---
 
-내가 진행하고 있는 유니티 프로젝트에서는 유니티에서 제공하는 StateMachineBehavior를 이용해 FSM을 설계한다.
+내가 진행하고 있는 유니티 프로젝트에서는 유니티에서 제공하는 AnimatorController와 StateMachineBehavior를 이용해 FSM을 설계한다.
 
 [상태 머신 동작 - Unity 3D Docs](https://docs.unity3d.com/kr/560/Manual/StateMachineBehaviours.html)  
 [생명주기에서의 상태 머신- Unity 3D Docs](https://docs.unity3d.com/kr/current/Manual/ExecutionOrder.html#AnimationUpdateLoop:~:text=StateMachineBehaviour%20(OnStateEnter/OnStateUpdate/OnStateExit)%3A%20%EB%A0%88%EC%9D%B4%EC%96%B4%EA%B0%80%20%EC%B5%9C%EB%8C%80%203%EA%B0%9C%EC%9D%98%20%ED%99%9C%EC%84%B1%20%EC%83%81%ED%83%9C(%ED%98%84%EC%9E%AC%20%EC%83%81%ED%83%9C%2C%20%EC%A4%91%EB%8B%A8%EB%90%9C%20%EC%83%81%ED%83%9C%2C%20%EB%8B%A4%EC%9D%8C%20%EC%83%81%ED%83%9C)%EB%A5%BC%20%EA%B0%80%EC%A7%88%20%EC%88%98%20%EC%9E%88%EC%8A%B5%EB%8B%88%EB%8B%A4.%20%EC%9D%B4%20%ED%95%A8%EC%88%98%EB%8A%94%20OnStateEnter%2C%20OnStateUpdate%20%EB%98%90%EB%8A%94%20OnStateExit%20%EC%BD%9C%EB%B0%B1%EC%9D%84%20%EC%A0%95%EC%9D%98%ED%95%98%EB%8A%94%20StateMachineBehaviour%20%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8%EA%B0%80%20%ED%8F%AC%ED%95%A8%EB%90%9C%20%EA%B0%81%20%ED%99%9C%EC%84%B1%20%EC%83%81%ED%83%9C%EC%97%90%20%EB%8C%80%ED%95%B4%20%ED%98%B8%EC%B6%9C%EB%90%A9%EB%8B%88%EB%8B%A4.)
