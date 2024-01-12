@@ -162,3 +162,22 @@ Animation의 Transition Duration을 이용하면 <u>두 상태를 동시에 가�
 
 플레이어 FSM에 이어 몬스터 FSM을 설계하는데 몬스터 FSM은 다양한 종류의 몬스터를 고려해야 해서 더 복잡한 것 같다.  
 각 <u>State에서의 스크립트</u>와 <u>MonoBehavior의 스크립트(게임 오브젝트의 컴포넌트에서 실행되는 스크립트)</u>를 적절히 잘 사용하도록 노력하자.
+
+### 라고 생각했지만 아니었다
+
+---
+
+위의 방식대로 하면 일시적으로 문제를 해결할 수 있었지만  
+본질적인 원인인 Animation이 `Transition` 되면서 2개의 State를 동시에 가질 수 있다는 점이 계속해서 발목을 잡았다.
+
+StateMachineBehaviour와 MonoBehavior를 함께 사용하는 방식이 단순한 FSM에서는 괜찮을지도 모르겠지만 나의 경우는 아니었다.
+
+몬스터는 StateMachineBehavior를 상속받아 FSM을 설계했지만,  
+플레이어는 순수 C# 스크립트로 SMB를 상속받지 않고 사용했는데,  
+이 방식으로 다시 재작 업해야 한다는 생각이 들었다.
+
+즉 StateMachineBehaviour를 직접 제작하면서 수동으로 Animation 전환에 따른 ChangeState를 해줘야 한다는 것이다.
+
+[나와 비슷한 고민을 하는 `olejuer`](https://forum.unity.com/threads/state-machine-behaviour-best-practices.848410/)
+
+`StateMachineBase와` `StateBase` 이 두 클래스를 기반으로 FSM 설계를 다시 하러 간다.
