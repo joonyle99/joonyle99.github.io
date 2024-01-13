@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "Data Structure / Algorithm - 시퀀스 컨테이너 vs 연관 컨테이너 (수정)"
+title:  "Data Structure / Algorithm - 시퀀스 컨테이너 vs 연관 컨테이너 (수정 필요)"
 categories:
   - DataStructure_Algorithm
 ---

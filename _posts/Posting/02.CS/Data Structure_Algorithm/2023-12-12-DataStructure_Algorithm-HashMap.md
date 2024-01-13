@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "Data Structure / Algorithm - HashMap (수정)"
+title:  "Data Structure / Algorithm - HashMap (수정 필요)"
 categories:
   - DataStructure_Algorithm
 ---
