@@ -63,4 +63,5 @@ double Sqrt_NewtonRaphson(double number)
 }
 ```
 
-이렇게 `Newton-Raphson` 알고리즘을 통해 무리수를 근사값으로 계산할 수 있다.
+이렇게 `Newton-Raphson` 알고리즘을 통해 무리수를 근삿값으로 계산할 수 있다.  
+제곱근 하나 구하는데 설정한 오차범위에 따라서 `While`문을 계속해서 돌려줘야 하므로 오버헤드가 예상된다.

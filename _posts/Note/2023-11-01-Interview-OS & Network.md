@@ -1,11 +1,3 @@
----
-layout: single
-title:  "Interview - 운영체제 & 네트워크"
-categories:
-  - Interview
----
-
----
 
 ### VM(Virtual Machine)에 대해
 ---

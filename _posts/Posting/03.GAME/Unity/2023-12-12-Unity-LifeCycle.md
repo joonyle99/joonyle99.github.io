@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "Unity - Life Cycle (수정 필요)"
+title:  "Unity - Life Cycle (작성중)"
 categories:
   - Unity
 ---

@@ -1,11 +1,3 @@
----
-layout: single
-title:  "Interview - 자료구조 & 알고리즘"
-categories:
-  - Interview
----
-
----
 
 ### Dictionary의 내부 구조와 시간 복잡도에 대해
 ---

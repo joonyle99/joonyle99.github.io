@@ -1,11 +1,3 @@
----
-layout: single
-title:  "Interview - 그래픽스 & 수학"
-categories:
-  - Interview
----
-
----
 
 ### 인덱스 버퍼(Index Buffer)에 대해
 ---

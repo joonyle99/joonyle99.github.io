@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "Programming - 동적 할당 남발하면 안되는 이유 (수정 필요)"
+title:  "Programming - 동적 할당 남발하면 안되는 이유 (작성중)"
 categories:
   - Programming
 ---

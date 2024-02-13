@@ -53,4 +53,4 @@ public static Vector3 MoveTowards(Vector3 current, Vector3 target, float maxDist
 }
 ```
 
-[제곱근을 구하는 연산 sqrt() 함수가 연산량이 많은 이유](https://joonyle99.github.io/blog/math/Math-Root-Operation/)
+[제곱근을 구하는 연산 sqrt() 함수가 연산량이 많은 이유](https://joonyle99.github.io/math/Math-Newton_Raphson-Algorithm/)
