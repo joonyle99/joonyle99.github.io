@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "Data Structure / Algorithm - HashMap (수정 필요)"
+title:  "Data Structure / Algorithm - HashMap (작성중)"
 categories:
   - DataStructure_Algorithm
 ---
@@ -21,7 +21,5 @@ HashMap(해시 테이블)은, `Key`값을 해시 함수에 대입하여 나온 `
 이러한 문제를 해결하기 위한 방법인 Chaining과 Open Address에 대해 알아보자
 
 1. Chaining
-
-
 
 2. OpenAddress
