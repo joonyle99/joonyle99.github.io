@@ -31,7 +31,7 @@ __비선형 자료구조__ 는 <u>데이터가 계층적이거나 그래프 형�
 
 ---
 
-그 중에서 트리(Tree) 자료구조의 순회(Traversal)에 대해 알아보자.
+그중에서 트리(Tree) 자료구조의 순회(Traversal)에 대해 알아보자.
 
 비선형 자료구조인 __트리의 순회__ 란 트리의 <u>모든 노드를 방문하는 과정</u>을 뜻한다.  
 선형 자료구조는 순차적으로 요소에 접근하지만 비선형 자료구조는 다른 방식을 사용해야 한다.
@@ -151,10 +151,10 @@ void PrintPostorder(Node* rootNode)
 		return;
 
 	// 왼쪽 서브 트리 노드 츨력
-	PrintInorder(rootNode->left);
+	PrintPostorder(rootNode->left);
 
 	// 오른쪽 서브 트리 노드 츨력
-	PrintInorder(rootNode->right);
+	PrintPostorder(rootNode->right);
 
 	// 루트 노드 출력
 	std::cout << rootNode->data << '\n';
