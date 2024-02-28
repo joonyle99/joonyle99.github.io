@@ -328,6 +328,9 @@ Quick Sort의 O(NlogN)과 Merge Sort의 O(NlogN)을 비교하면
 Quick Sort가 더 빠르지만, Merge Sort로도 충분하기 때문에 만들어 사용할 때는  
 Merge Sort로 구현해 사용하자.
 
+> 대부분의 STL의 경우에서 Quick Sort를 사용한다고 했는데, 정확히는 '최적화된 퀵 정렬'을 사용한다.  
+> 어느정도는 Quick Sort를 사용한 후 Heap Sort를 사용한다든지, Pivot을 랜덤하게 설정한다든지 등
+
 ### 4. Merge Sort vs Quick Sort
 
 ---
