@@ -13,6 +13,19 @@ categories:
 
 유튜버 [BaaarkingDog](https://www.youtube.com/@BaaaaaaaaaaaaaaaaaaaaarkingDog)님의 알고리즘 강의 내용을 바탕으로 한 내용입니다.
 
+제가 푼 백준 문제는 다음과 같습니다.
+
+1. [2751](https://www.acmicpc.net/problem/2751)
+2. [10989](https://www.acmicpc.net/problem/10989)
+3. [11931](https://www.acmicpc.net/problem/11931)
+4. [15688](https://www.acmicpc.net/problem/15688)
+5. [10814](https://www.acmicpc.net/problem/10814)
+6. [11728](https://www.acmicpc.net/problem/11728)
+
+일반적인 정렬 문제로  
+STL을 사용하면 바로 풀리는 문제이지만  
+STL을 사용하지 않고 직접 만든 정렬을 이용해 풀었습니다.
+
 ### 2. 기본 정렬 (Basic Sort)
 
 ---
