@@ -12,6 +12,15 @@
   {% assign crumb_path = site.category_archive.path %}
 {% endif %}
 
+<!--
+
+// Docs Note
+
+최상위문서/상위문서/해당포스트 이런식의 계층 구조로 해당 페이지의 상대적 위치를 보여준다.
+이렇게 breadcrumbs 를 구현할 수 있는 html 문서가 있으니 _config.yml혹은 각 포스트 md 파일 머릿말에 breadcrumb: true 해주면 나타난다.
+
+-->
+
 <nav class="breadcrumbs">
   <ol itemscope itemtype="https://schema.org/BreadcrumbList">
     {% assign crumbs = page.url | split: '/' %}

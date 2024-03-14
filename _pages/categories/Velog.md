@@ -1,9 +1,9 @@
 ---
-title: "면접"
+title: "개발 일지"
 layout: archive
-permalink: categories/interview/
+permalink: categories/velog/
 author_profile: true
 ---
 
-{% assign posts = site.categories.Interview %}
+{% assign posts = site.categories.Velog %}
 {% for post in posts %} {% include archive-single2.html type=page.entries_layout %} {% endfor %}

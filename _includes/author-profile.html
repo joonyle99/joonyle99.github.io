@@ -1,6 +1,14 @@
 {% assign author = page.author | default: page.authors[0] | default: site.author %}
 {% assign author = site.data.authors[author] | default: author %}
 
+<!--
+
+// Docs Note
+
+author profile의 link로 프로필에 삽입할 수 있도록 Github, mail, facebook, steam, youtube 등등 다양한 링크의 HTML 코드를 제공한다.
+
+-->
+
 <div itemscope itemtype="https://schema.org/Person" class="h-card">
 
   {% if author.avatar %}
