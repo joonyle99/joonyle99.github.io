@@ -1,8 +1,8 @@
 ---
 layout: single
-title:  "Velog - Test"
+title:  "Develog - Test"
 categories:
-  - Velog
+  - Develog
 ---
 
 ---
