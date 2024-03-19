@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "Develog - Test"
+title:  "Develog - 테스트"
 categories:
   - Develog
 ---
