@@ -70,3 +70,48 @@ StringBuilder 개체에 문자를 추가하면, StringBuilder.Capacity 크기와
 1. **프로그램이 실행될 때까지 프로그램이 처리해야 할 문자열의 개수를 미리 알 수 없는 상황**  
 (ex : 루프를 사용하여 사용자 입력이 포함된 난수의 문자열을 연결할 때)
 1. **문자열을 상당히 많이 변경할 것으로 예상되는 경우**
+
+### 문자열 조작이 많은 상황에서 String과 StringBuilder의 성능차이
+
+---
+
+```cs
+// string vs stringBuilder
+// 문자열 연산 시 속도 비교
+
+// static은 정적 메서드 사용 시 선언하는데
+// 클래스의 인스턴스 생성없이 메서드를 클래스 딴에서 호출할 수 있다.
+static int Main()
+{
+    string str = "Hello";
+    DateTime strStartTime = DateTime.Now;
+
+    for (int i = 0; i < 100000; i++)
+    {
+        // String의 += 연산자는 문자열 조작 시, 새로운 메모리를 할당받는다. 따라서 문자열 조작에 큰 비용이 든다.
+        str += " World";
+    }
+
+    DateTime strEndTime = DateTime.Now;
+    TimeSpan strDuration = strEndTime - strStartTime;
+    Console.WriteLine(string.Format($"String Duration: {strDuration.TotalMilliseconds} ms"));
+
+    StringBuilder sb = new StringBuilder("Hello");
+    DateTime sbStartTime = DateTime.Now;
+
+    for (int i = 0; i < 100000; i++)
+    {
+        // StringBuilder의 Append() 함수는 문자열 조작 시, 새로운 개체가 아닌 원본의 동적 배열로 이루어진 문자열의 크기를 늘리므로써 조작하기 때문에 비용이 적다.
+        sb.Append(" World");
+    }
+
+    DateTime sbEndTime = DateTime.Now;
+    TimeSpan sbEndTimeDuration = sbEndTime - sbStartTime;
+    Console.WriteLine(string.Format($"StringBuilder Duration: {sbEndTimeDuration.TotalMilliseconds} ms"));
+
+    return 0;
+}
+```
+
+![](../../../../assets/images/2024-03-19-Csharp-String%20&%20StringBuilder/2024-03-20-15-13-53.png){: .align-center}
+*문자열 조작 연산이 10만번 있을 때, String과 StringBuilder의 성능 차이*
