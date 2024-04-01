@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "Book - 유니티 C# 스크립팅 마스터하기 - Chapter 2 : 디버깅"
+title:  "Book - 유니티 C# 스크립팅 마스터하기 - Chapter 2 : 디버깅 (작성중)"
 categories:
   - Book
 ---
