@@ -7,8 +7,6 @@ sidebar_main: true
 ---
 
 <!--
----
-
 {% for category in site.categories %}
 
 <span style="font-size: 18px;">{{ category[0] }}</span>
