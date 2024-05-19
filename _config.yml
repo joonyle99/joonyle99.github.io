@@ -117,7 +117,7 @@ analytics:
 author:
   name             : "Junyeol Gong"
   avatar           : "/assets/images/logo_unicon.png"
-  bio              : "행복은 깊이 느끼고, 단순하게 즐기고,\n자유롭게 사고하고, 삶에 도전하고,\n남에게 필요한 사람이 되는 능력에서 나온다." # "개발 공부 블로그"
+  bio              : "개발 공부 블로그" # "행복은 깊이 느끼고, 단순하게 즐기고,\n자유롭게 사고하고, 삶에 도전하고,\n남에게 필요한 사람이 되는 능력에서 나온다."
   location         : "Republic of Korea"
   email            : 
   links:
