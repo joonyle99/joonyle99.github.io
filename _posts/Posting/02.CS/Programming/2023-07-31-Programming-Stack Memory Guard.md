@@ -7,7 +7,7 @@ categories:
 
 ---
 
-![](../../../../assets/assets/images/2023-10-31-Programming-const%20vs%20define/2024-04-28-18-38-22.png).png){: .align-center}
+![](../../../../assets/images/2023-10-31-Programming-const%20vs%20define/2024-04-28-18-38-22.png){: .align-center}
 *Debug 모드에서 실행한 결과*
 
 디버그 모드에서는 스택 메모리에 "메모리 가드"가 존재한다.  
@@ -19,7 +19,7 @@ categories:
 이는 Debug 모드에서 스택 메모리에 스택 메모리 가드를 두는데,  
 이는 인접한 메모리 주소 간 침범을 방지하기 위함이다.
 
-![](../../../../assets/assets/images/2023-10-31-Programming-const%20vs%20define/2024-04-28-18-38-46.png).png){: .align-center}
+![](../../../../assets/images/2023-10-31-Programming-const%20vs%20define/2024-04-28-18-38-46.png){: .align-center}
 
 릴리스 모드에서는 효율성을 위해 이 메모리 가드가 없다.  
 따라서 위 사진과 같이 두 지역변수의 메모리 주소 차이는 4바이트가 나는 것을 볼 수 있다.

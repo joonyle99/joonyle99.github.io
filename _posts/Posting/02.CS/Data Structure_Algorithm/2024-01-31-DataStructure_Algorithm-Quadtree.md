@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "Data Structure / Algorithm - Quadtree 공간 분할"
+title:  "Data Structure / Algorithm - 쿼드 트리 (Quadtree) 공간 분할"
 categories:
   - DataStructure_Algorithm
 ---

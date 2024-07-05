@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "Programming - 1.1 + 0.1 == 1.2"
+title:  "Programming - 1.1 + 0.1 == 1.2는 거짓일 수 있다"
 categories:
   - Programming
 ---
