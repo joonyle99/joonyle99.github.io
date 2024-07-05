@@ -12,7 +12,7 @@ categories:
 ---
 
 [자세한 내용 - 커밋으로 보기](https://github.com/joonyle99/CPlusPlus_Study/commit/dc18a4d9e2d2a07a91d0cab1dbb49d64650279b6#diff-e3537b0b8347509c13f676f06bdea9ff4573f99e50ebb7b6f7249c16ab1f3e05)  
-[자세한 내용 - 파일로 버기](https://github.com/joonyle99/CPlusPlus_Study/blob/dc18a4d9e2d2a07a91d0cab1dbb49d64650279b6/CPlusPlus_Review/CPlusPlus_Review/OOP%20SOLID%20principle.cpp)
+[자세한 내용 - 파일로 보기](https://github.com/joonyle99/CPlusPlus_Study/blob/dc18a4d9e2d2a07a91d0cab1dbb49d64650279b6/CPlusPlus_Review/CPlusPlus_Review/OOP%20SOLID%20principle.cpp)
 
  
 1. **단일 책임 원칙 - SRP(Single Responsibility Principle)**

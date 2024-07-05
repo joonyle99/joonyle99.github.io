@@ -1,8 +1,8 @@
 ---
 layout: single
-title:  "Math - 프로그래밍에서의 제곱근 연산"
+title:  "Data Structure / Algorithm - Newton Raphson 알고리즘"
 categories:
-  - Math
+  - DataStructure_Algorithm
 ---
 
 ---
