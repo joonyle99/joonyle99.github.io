@@ -8,21 +8,25 @@ categories:
 ---
 
 ![](../../../../assets/images/2023-06-12-Cpp-Type%20&%20Name%20copy/2024-04-28-18-59-47.png){: .align-center}
+*클래스 A와 클래스 B*
 
 클래스 A와 A를 상속받은 클래스 B가 있다.  
 그리고 A에 Print()라는 함수가 있는 상황이다.  
 A의 객체와 B의 객체를 만들어보자.
 
 ![](../../../../assets/images/2023-06-12-Cpp-Type%20&%20Name%20copy/2024-04-28-19-00-08.png){: .align-center}
+*객체 생성 후의 조사식*
 
 객체 b는 A의 상속을 받을 것을 확인할 수 있는데,  
 만약 여기서 클래스 A에 가상함수를 추가해보겠다.
 
 ![](../../../../assets/images/2023-06-12-Cpp-Type%20&%20Name%20copy/2024-04-28-19-00-20.png){: .align-center}
+*virtual 가상함수 추가*
 
 기존의 Print() 함수에 virtual 키워드를 추가하여 가상함수로 만들어주면
 
 ![](../../../../assets/images/2023-06-12-Cpp-Type%20&%20Name%20copy/2024-04-28-19-00-30.png){: .align-center}
+*가상 함수 테이블 생성*
 
 a객체와 b객체에 __vfptr(virtual function pointer)가 생성된 것을 볼 수 있다.
 
@@ -33,10 +37,12 @@ __vfptr는 a와 b 각각에 생긴 서로 다른 "가상 함수 테이블"을 �
 a와 b의 함수포인터가 같은 것도 확인할 수 있다. (0x00007ff791a7149c)
 
 ![](../../../../assets/images/2023-06-12-Cpp-Type%20&%20Name%20copy/2024-04-28-19-01-01.png){: .align-center}
+*가상함수 오버라이딩*
 
 만약 클래스 B에 Print() 함수를 오버라이드 한다면?
 
 ![](../../../../assets/images/2023-06-12-Cpp-Type%20&%20Name%20copy/2024-04-28-19-01-16.png){: .align-center}
+*a와 b에의 Print() 함수는 서로 다른 주소값을 가지고 있음*
 
 위와 같이 void* 자료형의 함수포인터가 각각 다른 주소를 가리키고 있다. (b149c와 b14ab)
 
@@ -44,6 +50,7 @@ a와 b의 함수포인터가 같은 것도 확인할 수 있다. (0x00007ff791a7
 한 번 테스트 해보자.
 
 ​![](../../../../assets/images/2023-06-12-Cpp-Type%20&%20Name%20copy/2024-04-28-19-01-47.png){: .align-center}
+*같은 클래스의 객체는 같은 가상 함수 테이블을 가짐*
 
 클래스 A의 객체 aa와 aaa를 추가로 생성했다.  
 각각의 __vfptr을 확인해보면 모두 같은것을 확인할 수 있다.

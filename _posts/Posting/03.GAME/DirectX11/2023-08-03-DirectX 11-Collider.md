@@ -10,7 +10,7 @@ categories:
 ![](/assets/gif/d2d_collider.gif){: .align-center}
 
 물체의 이동과 충돌을 구현하면서 X Y 동시 이동을 하는 과정에서  
-Velocity에 deltaTime을  실수로 두 번 곱해줘서 잠시 애먹었지만 다행히 잘 캐치해서 버그를 해결했다.. ㅎ
+Velocity에 deltaTime을  실수로 두 번 곱해줘서 잠시 애먹었지만 다행히 잘 캐치해서 버그를 해결했다.
 
 요즘 DirectX 2D를 공부 중이다. 2D 플랫포머나 탑뷰 게임으로 프로젝트를 진행할 예정인데,  
 이를 위한 물리 기능을 중점으로 공부를 할 것 같다.

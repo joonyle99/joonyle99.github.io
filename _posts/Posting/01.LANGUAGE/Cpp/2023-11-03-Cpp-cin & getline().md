@@ -79,6 +79,7 @@ std::cout << "Name: " << name << std::endl;
 ```
 
 ![](/assets/images/cpp_cin_ignore1.png){: .align-center}
+*개행 문자가 입력 버퍼에 남아있음*
 
  이런 경우, cin.ignore() 함수를 사용하여 '\n'를 무시한다.
 
@@ -88,6 +89,7 @@ std::cout << "Name: " << name << std::endl;
 ```
 
 ![](/assets/images/cpp_cin_ignore2.png){: .align-center}
+*cin.ignore() 함수를 사용하여 개행 문자를 무시*
 
 
 <!--

@@ -49,6 +49,7 @@ categories:
    -> 가수 부분 (23 비트): 왼쪽부터 Mantissa의 값을 채워넣음
 
 ![](https://www.yorku.ca/pkashiya/binary/images/scientificnotation_1.jpeg){: .align-center}{: width="50%" height="50%"}
+*실수 자료형의 부동소수점 구조*
 
 이렇게 하면 컴퓨터가 부동 소수점을 메모리에 저장할 수 있게 된다.
 

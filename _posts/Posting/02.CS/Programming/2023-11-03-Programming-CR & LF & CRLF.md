@@ -13,6 +13,7 @@ categories:
 Github Blog를 업로드하기 위해 `git add .`를 하다가, 다음과 같은 경고가 떴다.
 
 ![](/assets/images/curious_warning.png){: width="70%" height="70%"}
+*git 사용 중 LF가 CRLF로 바뀐다는 경고문이 발생*
 
 사실 전에도 몇 번 본 적이 있었는데, 별일 없어서 넘어갔다가 이번에는 신경 쓰여서 알아보기로 했다.
 
@@ -27,5 +28,6 @@ Github Blog를 업로드하기 위해 `git add .`를 하다가, 다음과 같은
 이 정보를 토대로 다시 경고를 해석해 보면 `LF`는 `CRLF`으로 대체될 것이라는 뜻이다. 실제로 해당 파일에 들어가 보니 `LF`를 사용 중이었다.
 
 ![](/assets/images/curious_LF.png)
+*vscode에서 LF를 사용하고 있었음*
 
 따라서 현재 실행되고 있는 운영체제 Windows의 줄 바꿈 방식에 맞게 `CRLF`으로 자동으로 바꾼다는 경고였던것이다.

@@ -8,8 +8,12 @@ categories:
 ---
 
 ![](../../../../assets/images/2023-09-24-Programming-Moduler%20Operation/2024-04-28-19-09-44.png){: .align-center}
+*모듈러 연산의 활용을 요구하는 서브태스크 문제*
+
+<br>
 
 ![](../../../../assets/images/2023-09-24-Programming-Moduler%20Operation/2024-04-28-19-09-51.png){: .align-center}
+*모듈러 연산의 분배법칙*
 
 처음에는 왼쪽항 처럼 한번에 모듈러 연산을 실행해 주었는데,  
 모듈러 연산의 분배법칙을 이용해서 다시 코딩해주니까 효율성(?) 측면에서 해결이 된 모습이다.
